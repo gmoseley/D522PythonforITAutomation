@@ -13,30 +13,30 @@ print(hostname.split('-')[2])
 
 # ─── Ch04 | Challenge 3: Reverse It ──────────────────────────────────────────
 # Print hostname backwards using a slice with a step of -1
-#hostname = "ROUTER-01-FARGO"
-
-
+hostname = "ROUTER-01-FARGO"
+print(hostname[::-1])
 
 # ─── Ch04 | Challenge 4: Every Other Character ───────────────────────────────
 # Print every other character of hostname using slice step
-#hostname = "ROUTER-01-FARGO"
-
+hostname = "ROUTER-01-FARGO"
+print(hostname[::2])
 
 
 # ─── Ch04 | Challenge 5: First Four Characters ───────────────────────────────
 # Print just the first 4 characters of ip using slicing (not split)
-#ip = "192.168.1.105"
-
+ip = "192.168.1.105"
+print(ip[:4])
 
 
 # ─── Ch04 | Challenge 6: Last Octet ──────────────────────────────────────────
 # Print just the last 3 characters of ip using a negative slice
-#ip = "192.168.1.105"
-
+ip = "192.168.1.105"
+print(ip[:-4:-1])
 
 
 # ─── Ch04 | Challenge 7: Middle Chunk ────────────────────────────────────────
 # Print characters 4 through 10 of log_id using slicing
-#log_id = "LOG-20240115-CRITICAL-RTR01"
+log_id = "LOG-20240115-CRITICAL-RTR01"
+print(log_id[4:10])
 
 
