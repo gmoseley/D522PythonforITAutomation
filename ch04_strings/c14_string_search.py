@@ -9,7 +9,7 @@ print(config.find('ip address'))
 # Use .index() to find "subnet" in config — catch the ValueError if not found
 config = "interface GigabitEthernet0/0/1 ip address 10.0.1.1 255.255.255.0"
 try:
-    print(config.index('255.255.255.0'))
+    print(config.index('subnet'))
 except ValueError: 
     print('not found')
     
@@ -17,7 +17,7 @@ except ValueError:
 # ─── Ch04 | Challenge 3: Is It Local? ────────────────────────────────────────
 # Check if ip starts with "192.168" using 'in' and print "Local" or "External"
 ip = "192.168.10.50"
-if '192.' in ip:
+if '192.168' in ip:
     print('Local')
 else:
     print('External')
@@ -33,7 +33,7 @@ print(log.count('ERROR'))
 # If log_line contains "ERROR", print "ALERT: error detected" otherwise "OK"
 log_line = "2024-01-15 10:23:45 ERROR - Device unreachable: 10.0.0.254"
 if 'ERROR' in log_line:
-    print('ALERT')
+    print('ALERT: error detected')
 else:
     print('OK')
 
