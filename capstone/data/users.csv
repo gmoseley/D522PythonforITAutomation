@@ -1,0 +1,13 @@
+username,department,role,vpn_access,last_login,active
+nora.admin,IT,network_admin,True,2024-01-15,True
+john.smith,Sales,user,False,2024-01-14,True
+lisa.chen,IT,sysadmin,True,2024-01-15,True
+mike.torres,Marketing,user,False,2023-11-02,True
+sarah.jones,HR,user,False,2024-01-13,True
+dev.user1,Engineering,developer,True,2024-01-15,True
+dev.user2,Engineering,developer,True,2024-01-10,True
+guest.temp,Guest,user,False,2023-09-15,False
+bob.legacy,Finance,user,False,2022-03-01,False
+carol.it,IT,helpdesk,True,2024-01-15,True
+tom.vendor,External,vendor,True,2024-01-08,True
+alice.exec,Executive,manager,True,2024-01-14,True

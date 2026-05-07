@@ -1,0 +1,20 @@
+2024-01-15 08:00:01 INFO CORE-RTR-01 Interface GigabitEthernet0/0/1 UP
+2024-01-15 08:00:05 WARNING DIST-SW-01 High CPU utilization: 87%
+2024-01-15 08:01:12 ERROR FW-EDGE-01 Dropped 47 packets from 203.0.113.45 - policy violation
+2024-01-15 08:01:45 INFO DHCP-SRV-01 Lease issued to 10.0.1.55 (duration: 86400s)
+2024-01-15 08:02:03 CRITICAL CORE-RTR-02 BGP session dropped - peer 10.10.10.2 unreachable
+2024-01-15 08:02:44 INFO ACCESS-SW-01 Port Gi0/1 link UP - device 00:1A:2B:3C:4D:5E
+2024-01-15 08:03:11 ERROR DIST-SW-02 STP topology change detected on VLAN 20
+2024-01-15 08:03:58 WARNING DNS-SRV-01 Query response time exceeding 200ms
+2024-01-15 08:04:22 CRITICAL FW-EDGE-02 Intrusion detected - signature: SQL_INJECTION from 198.51.100.77
+2024-01-15 08:05:01 INFO CORE-RTR-01 Route added: 10.20.0.0/16 via 10.10.0.2
+2024-01-15 08:05:34 ERROR ACCESS-SW-03 Port Gi0/12 flapping - disable threshold reached
+2024-01-15 08:06:02 INFO BACKUP-SRV-01 Backup job completed - 142 files, 4.7GB
+2024-01-15 08:06:45 WARNING CORE-RTR-02 Interface load at 94% - consider load balancing
+2024-01-15 08:07:13 CRITICAL DIST-SW-03 Power supply failure - running on single PSU
+2024-01-15 08:07:59 ERROR DHCP-SRV-01 Pool exhausted on subnet 10.0.2.0/24
+2024-01-15 08:08:21 INFO AP-FLOOR1-01 Client 00:AA:BB:CC:DD:EE associated on 5GHz
+2024-01-15 08:09:04 WARNING FW-EDGE-01 Certificate expiring in 14 days
+2024-01-15 08:09:47 ERROR CORE-RTR-01 OSPF neighbor 10.0.0.2 went down
+2024-01-15 08:10:30 CRITICAL ACCESS-SW-04 Uplink failure - device isolated from network
+2024-01-15 08:11:15 INFO DNS-SRV-01 Zone transfer completed for pruhart.local
