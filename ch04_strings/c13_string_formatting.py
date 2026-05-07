@@ -3,15 +3,15 @@
 # Hint: use round() inside the f-string
 hostname = "CORE-RTR-01"
 cpu_usage = 73.6
-print(f'{hostname} is at {round(cpu_usage,2)}% CPU')
+print(f'{hostname} is at {round(cpu_usage,2)}% CPU (rounded: {round(cpu_usage)}%)')
 
 
 # ─── Ch04 | Challenge 2: The Big Block ───────────────────────────────────────
 #Store the 3-line network report below in a triple-quoted string and print it
 report = """
-Line 1: "=== Pruhart Tech Network Status ==="
-Line 2: "Status: DEGRADED"
-Line 3: "Affected Sites: 3"
+=== Pruhart Tech Network Status ===
+Status: DEGRADED
+Affected Sites: 3
 """
 print(report)
 
