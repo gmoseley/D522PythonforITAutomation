@@ -1,13 +1,14 @@
 # ─── Ch04 | Challenge 1: Extract the Device Type ────────────────────────────
 # Slice or split hostname to print just "ROUTER" (everything before the first dash)
-#hostname = "ROUTER-01-FARGO"
+hostname = "ROUTER-01-FARGO"
+print(hostname.split('-')[0])
 
 
 
 # ─── Ch04 | Challenge 2: Extract the Location ────────────────────────────────
 # Slice or split hostname to print just "FARGO" (everything after the last dash)
-#hostname = "ROUTER-01-FARGO"
-
+hostname = "ROUTER-01-FARGO"
+print(hostname.split('-')[2])
 
 
 # ─── Ch04 | Challenge 3: Reverse It ──────────────────────────────────────────
