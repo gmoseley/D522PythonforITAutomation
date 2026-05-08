@@ -3,6 +3,8 @@
 user_input = '67' #input('Please input a value: ')
 if user_input.isdigit():
     print(int(user_input) * 2)
+else:
+    print('Invalid input!')
 
 
 
@@ -10,9 +12,9 @@ if user_input.isdigit():
 # Use .isalpha() to check if username is letters only — print pass or fail
 username = "admin123"
 if username.isalpha():
-    print('True')
+    print('pass')
 else:
-    print('False')
+    print('fail')
 
 
 # ─── Ch04 | Challenge 3: Upper or Lower? ─────────────────────────────────────
