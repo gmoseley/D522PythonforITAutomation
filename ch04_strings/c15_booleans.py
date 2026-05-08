@@ -1,15 +1,18 @@
 # ─── Ch04 | Challenge 1: Is It a Number? ─────────────────────────────────────
 # Use .isdigit() to check user_input — if valid, convert and print x2, else warn
 user_input = '67' #input('Please input a value: ')
-print(user_input.isdigit())
+if user_input.isdigit():
+    print(int(user_input) * 2)
 
 
 
 # ─── Ch04 | Challenge 2: Letters Only ────────────────────────────────────────
 # Use .isalpha() to check if username is letters only — print pass or fail
 username = "admin123"
-print(username.isalpha())
-
+if username.isalpha():
+    print('True')
+else:
+    print('False')
 
 
 # ─── Ch04 | Challenge 3: Upper or Lower? ─────────────────────────────────────
@@ -36,7 +39,7 @@ else:
 
 # ─── Ch04 | Challenge 5: Store the Result ────────────────────────────────────
 # Store the result of (port == 443) in a variable, use it in an if to print "Secure" or "Insecure"
-port = '8080'
+port = '443'
 
 if '443' == port:
     print('This host is secured with HTTPS')
