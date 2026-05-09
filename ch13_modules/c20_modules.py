@@ -61,3 +61,58 @@
 # Import helpers here and call both functions
 
 
+
+# ─── Ch13 | Challenge 11: WGU Style — Get File Extension ────────────────────
+# Complete the Python function get_file_extension.
+# The function should accept a filename string and return just the file extension
+# including the dot. Use os.path.splitext().
+#
+# Example: get_file_extension("network_log.txt") → ".txt"
+# Example: get_file_extension("config.json") → ".json"
+#
+import os
+def get_file_extension(filename):
+    pass
+
+
+
+# ─── Ch13 | Challenge 12: WGU Style — Days Since Date ───────────────────────
+# Complete the Python function days_since.
+# The function should accept a date string formatted as "YYYY-MM-DD",
+# parse it using datetime, and return the number of days between that date
+# and today as an integer.
+#
+# Example: days_since("2024-01-01") → (some positive integer)
+#
+from datetime import datetime
+def days_since(date_string):
+    pass
+
+
+
+# ─── Ch13 | Challenge 13: WGU Style — Extract All IPs ───────────────────────
+# Complete the Python function extract_all_ips.
+# The function should accept a text string, use re.findall() with a pattern
+# to extract all IPv4 addresses, and return them as a list.
+#
+# Example: extract_all_ips("Host 10.0.0.1 and 192.168.1.5 are down") → ["10.0.0.1", "192.168.1.5"]
+# Example: extract_all_ips("No IPs here") → []
+#
+import re
+def extract_all_ips(text):
+    pass
+
+
+
+# ─── Ch13 | Challenge 14: WGU Style — Load JSON Config ──────────────────────
+# Complete the Python function load_json_config.
+# The function should accept a filepath string, open and parse the JSON file,
+# and return the resulting Python dictionary.
+#
+# Example: load_json_config("data/device_config.json") → [{"hostname": "CORE-RTR-01", ...}, ...]
+#
+import json
+def load_json_config(filepath):
+    pass
+
+

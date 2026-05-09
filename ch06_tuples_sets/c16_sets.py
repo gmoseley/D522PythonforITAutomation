@@ -32,3 +32,29 @@
 #core_vlans = frozenset({10, 20, 30})
 
 
+
+# ─── Ch06 | Challenge 7: WGU Style — Shared VLANs ───────────────────────────
+# Complete the Python function get_shared_vlans.
+# The function should accept two sets of VLAN IDs, return a sorted list
+# of VLANs that appear in both sets (the intersection).
+#
+# Example: get_shared_vlans({10, 20, 30}, {20, 30, 40}) → [20, 30]
+# Example: get_shared_vlans({10, 20}, {30, 40}) → []
+#
+def get_shared_vlans(site_a, site_b):
+    pass
+
+
+
+# ─── Ch06 | Challenge 8: WGU Style — Deduplicate IPs ────────────────────────
+# Complete the Python function deduplicate_ips.
+# The function should accept a list of IP address strings that may contain
+# duplicates, and return a sorted list of unique IPs.
+#
+# Example: deduplicate_ips(["10.0.0.5", "10.0.0.1", "10.0.0.5"]) → ["10.0.0.1", "10.0.0.5"]
+# Example: deduplicate_ips(["192.168.1.1"]) → ["192.168.1.1"]
+#
+def deduplicate_ips(ip_list):
+    pass
+
+

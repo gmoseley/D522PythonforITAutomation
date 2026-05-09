@@ -50,3 +50,30 @@ log_lines = [
 for i in log_lines:
     if 'CRITICAL' in i:
         print(i)
+
+
+# ─── Ch04 | Challenge 7: WGU Style — Flag Critical Events ────────────────────
+# Complete the Python function is_critical_event.
+# The function should accept a log_line string and return True if it contains
+# "CRITICAL" or "ERROR" (case-sensitive), otherwise return False.
+#
+# Example: is_critical_event("CRITICAL: Core switch unreachable") → True
+# Example: is_critical_event("INFO: System startup complete") → False
+#
+def is_critical_event(log_line):
+    pass
+
+
+
+# ─── Ch04 | Challenge 8: WGU Style — Extract the IP ─────────────────────────
+# Complete the Python function extract_ip.
+# The function should accept a log_line string that contains an IPv4 address
+# somewhere in it. Find the position of the first digit that starts an IP,
+# and return just the IP address substring.
+# Hint: use .split() and check each token with .replace('.','').isdigit()
+#
+# Example: extract_ip("Device 192.168.1.105 unreachable") → "192.168.1.105"
+# Example: extract_ip("Blocked host 10.0.0.5 on port 22") → "10.0.0.5"
+#
+def extract_ip(log_line):
+    pass

@@ -59,3 +59,30 @@ for value in values:
     else:
         print('falsy')
 
+
+# ─── Ch04 | Challenge 7: WGU Style — Validate IP Segment ─────────────────────
+# Complete the Python function is_valid_segment.
+# The function should accept a string representing one octet of an IP address,
+# return True if it is a digit string AND its integer value is between 0 and 255,
+# otherwise return False.
+#
+# Example: is_valid_segment("192") → True
+# Example: is_valid_segment("256") → False
+# Example: is_valid_segment("abc") → False
+#
+def is_valid_segment(segment):
+    pass
+
+
+
+# ─── Ch04 | Challenge 8: WGU Style — Validate Hostname Prefix ────────────────
+# Complete the Python function is_valid_hostname.
+# The function should accept a hostname string and return True if it starts with
+# "RTR", "SW", "FW", or "AP" — otherwise return False.
+#
+# Example: is_valid_hostname("RTR-01-FARGO") → True
+# Example: is_valid_hostname("SERVER-01") → False
+#
+def is_valid_hostname(hostname):
+    pass
+

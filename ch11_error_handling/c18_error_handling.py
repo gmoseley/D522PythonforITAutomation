@@ -50,3 +50,59 @@
 # instead of printing it, so the script doesn't crash visibly
 
 
+
+# ─── Ch11 | Challenge 10: WGU Style — Safe Divide ───────────────────────────
+# Complete the Python function safe_divide.
+# The function should accept two numbers a and b, attempt to divide a by b,
+# and return the float result. If b is zero, catch the ZeroDivisionError
+# and return None instead of crashing.
+#
+# Example: safe_divide(10, 2) → 5.0
+# Example: safe_divide(10, 0) → None
+#
+def safe_divide(a, b):
+    pass
+
+
+
+# ─── Ch11 | Challenge 11: WGU Style — Safe Int Convert ──────────────────────
+# Complete the Python function safe_int_convert.
+# The function should accept a string value, attempt to convert it to an integer,
+# and return the integer. If conversion fails (ValueError), return -1.
+#
+# Example: safe_int_convert("42") → 42
+# Example: safe_int_convert("abc") → -1
+#
+def safe_int_convert(value):
+    pass
+
+
+
+# ─── Ch11 | Challenge 12: WGU Style — Validate Port ─────────────────────────
+# Complete the Python function validate_port.
+# The function should accept an integer port number.
+# If the port is outside the range 1–65535, raise a ValueError with the message
+# "Invalid port: {port}". If valid, return True.
+#
+# Example: validate_port(443) → True
+# Example: validate_port(99999) → raises ValueError: "Invalid port: 99999"
+#
+def validate_port(port):
+    pass
+
+
+
+# ─── Ch11 | Challenge 13: WGU Style — Parse Severity ────────────────────────
+# Complete the Python function parse_severity.
+# The function should accept a log_line string and check if it contains
+# "INFO", "WARNING", "ERROR", or "CRITICAL".
+# Return the matched severity string. If none found, raise a ValueError
+# with the message "No severity found".
+#
+# Example: parse_severity("ERROR: device unreachable") → "ERROR"
+# Example: parse_severity("unknown message") → raises ValueError: "No severity found"
+#
+def parse_severity(log_line):
+    pass
+
+

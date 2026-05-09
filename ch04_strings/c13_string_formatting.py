@@ -44,3 +44,31 @@ ip = "10.0.0.1"
 status = "UP"
 
 print(f'| {device:<16} | {ip:<16} | {status:<16} |')
+
+
+# ─── Ch04 | Challenge 7: WGU Style — Format Uptime ───────────────────────────
+# Complete the Python function format_uptime.
+# The function should accept a float representing total hours of uptime,
+# and return a string formatted as "X hours, Y minutes".
+# Use floor division and modulo to split hours and leftover minutes.
+#
+# Example: format_uptime(2.5) → "2 hours, 30 minutes"
+# Example: format_uptime(1.25) → "1 hours, 15 minutes"
+#
+def format_uptime(hours):
+    pass
+
+
+
+# ─── Ch04 | Challenge 8: WGU Style — Build a Table Row ───────────────────────
+# Complete the Python function make_table_row.
+# The function should accept hostname (string), ip (string), and status (string),
+# and return a single formatted string with each value padded to a fixed width
+# inside pipe separators: "| HOSTNAME         | IP              | STATUS  |"
+# Use left-aligned padding: hostname 16 chars, ip 15 chars, status 8 chars.
+#
+# Example: make_table_row("CORE-RTR-01", "10.0.0.1", "UP")
+#          → "| CORE-RTR-01      | 10.0.0.1        | UP       |"
+#
+def make_table_row(hostname, ip, status):
+    pass
