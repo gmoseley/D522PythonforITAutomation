@@ -60,29 +60,33 @@ for value in values:
         print('falsy')
 
 
-# ─── Ch04 | Challenge 7: WGU Style — Validate IP Segment ─────────────────────
-# Complete the Python function is_valid_segment.
-# The function should accept a string representing one octet of an IP address,
-# return True if it is a digit string AND its integer value is between 0 and 255,
-# otherwise return False.
+# ─── Ch04 | Challenge 7: WGU Style — Validate IP Octet ──────────────────────
+# Complete the Python function is_valid_ip_octet.
+# The function should accept a string representing one octet of an IP address.
+# Return True if the string is all digits AND the integer value is between 0 and 255.
+# Return False otherwise.
 #
-# Example: is_valid_segment("192") → True
-# Example: is_valid_segment("256") → False
-# Example: is_valid_segment("abc") → False
+# Example: is_valid_ip_octet("192") → True
+# Example: is_valid_ip_octet("256") → False
+# Example: is_valid_ip_octet("abc") → False
 #
-def is_valid_segment(segment):
+def is_valid_ip_octet(value):
     pass
 
 
 
-# ─── Ch04 | Challenge 8: WGU Style — Validate Hostname Prefix ────────────────
-# Complete the Python function is_valid_hostname.
-# The function should accept a hostname string and return True if it starts with
-# "RTR", "SW", "FW", or "AP" — otherwise return False.
+# ─── Ch04 | Challenge 8: WGU Style — Validate ID ────────────────────────────
+# Complete the Python function validate_id.
+# The function should accept a string and return True if ALL of these are true:
+#   - Total length is exactly 8 characters
+#   - First 3 characters are all uppercase letters
+#   - Last 5 characters are all digits
+# Return False otherwise.
 #
-# Example: is_valid_hostname("RTR-01-FARGO") → True
-# Example: is_valid_hostname("SERVER-01") → False
+# Example: validate_id("HRD00123") → True
+# Example: validate_id("Ops123456") → False
+# Example: validate_id("HRD0012") → False
 #
-def is_valid_hostname(hostname):
+def validate_id(employee_id):
     pass
 

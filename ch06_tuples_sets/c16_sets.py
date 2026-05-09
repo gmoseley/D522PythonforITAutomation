@@ -46,15 +46,17 @@ def get_shared_vlans(site_a, site_b):
 
 
 
-# ─── Ch06 | Challenge 8: WGU Style — Deduplicate IPs ────────────────────────
-# Complete the Python function deduplicate_ips.
-# The function should accept a list of IP address strings that may contain
-# duplicates, and return a sorted list of unique IPs.
+# ─── Ch06 | Challenge 8: WGU Style — Find Unauthorized IPs ──────────────────
+# Complete the Python function find_unauthorized_ips.
+# The function should accept a list of IP strings (logged_ips) and a set of
+# allowed IPs (allowed_ips). Return a sorted list of IPs from logged_ips that
+# are NOT in allowed_ips — deduplicated (no repeats in the result).
 #
-# Example: deduplicate_ips(["10.0.0.5", "10.0.0.1", "10.0.0.5"]) → ["10.0.0.1", "10.0.0.5"]
-# Example: deduplicate_ips(["192.168.1.1"]) → ["192.168.1.1"]
+# Example: find_unauthorized_ips(["10.0.0.5", "10.0.0.1", "10.0.0.5"], {"10.0.0.1"})
+#          → ["10.0.0.5"]
+# Example: find_unauthorized_ips(["10.0.0.1"], {"10.0.0.1"}) → []
 #
-def deduplicate_ips(ip_list):
+def find_unauthorized_ips(logged_ips, allowed_ips):
     pass
 
 

@@ -76,30 +76,30 @@ def collect_evens(limit):
 
 
 
-# ─── Ch10 | Challenge 12: WGU Style — Count Retries ─────────────────────────
-# Complete the Python function count_retries.
-# The function should accept a list of status strings like "DOWN" and "UP",
-# use a while loop to count how many "DOWN" statuses appear before the first "UP",
-# and return that count. If "UP" never appears, return the total list length.
+# ─── Ch10 | Challenge 12: WGU Style — Count Down List ───────────────────────
+# Complete the Python function count_down_list.
+# The function should accept a positive integer start, use a while loop to
+# build a list counting down from start to 1 (inclusive), and return the list.
 #
-# Example: count_retries(["DOWN", "DOWN", "UP", "DOWN"]) → 2
-# Example: count_retries(["DOWN", "DOWN", "DOWN"]) → 3
+# Example: count_down_list(5) → [5, 4, 3, 2, 1]
+# Example: count_down_list(3) → [3, 2, 1]
 #
-def count_retries(statuses):
+def count_down_list(start):
     pass
 
 
 
-# ─── Ch10 | Challenge 13: WGU Style — Find First Match ───────────────────────
-# Complete the Python function find_first_match.
-# The function should accept a list of log strings and a keyword string,
-# use a while loop to find the first log entry that contains keyword,
-# and return that entry. If no match is found, return None.
+# ─── Ch10 | Challenge 13: WGU Style — Identify High CPU ─────────────────────
+# Complete the Python function identify_high_cpu.
+# The function should accept a list of floats representing CPU usage percentages.
+# Return a list of INTEGER INDICES (not the values themselves) where CPU usage
+# is greater than 90.0. Use a while loop (not a for loop).
 #
-# Example: find_first_match(["INFO: ok", "ERROR: down", "INFO: ok"], "ERROR") → "ERROR: down"
-# Example: find_first_match(["INFO: ok", "INFO: ok"], "ERROR") → None
+# Example: identify_high_cpu([85.0, 92.5, 88.0, 95.2]) → [1, 3]
+# Example: identify_high_cpu([91.0, 88.8]) → [0]
+# Example: identify_high_cpu([80.0, 85.0]) → []
 #
-def find_first_match(logs, keyword):
+def identify_high_cpu(cpu_list):
     pass
 
 

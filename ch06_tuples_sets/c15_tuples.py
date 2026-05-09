@@ -34,15 +34,16 @@ def get_server(servers, index):
 
 
 
-# ─── Ch06 | Challenge 6: WGU Style — Swap a Pair ─────────────────────────────
-# Complete the Python function swap_pair.
-# The function should accept a tuple of exactly two items and return a new tuple
-# with the items in reversed order.
+# ─── Ch06 | Challenge 6: WGU Style — Unpack Device Record ───────────────────
+# Complete the Python function unpack_device_record.
+# The function should accept a tuple of exactly 4 items: (hostname, ip, role, status).
+# Unpack the tuple and return a formatted string:
+# "Device: {hostname} | IP: {ip} | Role: {role} | Status: {status}"
 #
-# Example: swap_pair(("RTR-01", "UP")) → ("UP", "RTR-01")
-# Example: swap_pair(("10.0.0.1", "CORE")) → ("CORE", "10.0.0.1")
+# Example: unpack_device_record(("CORE-RTR-01", "10.0.0.1", "Core Router", "UP"))
+#          → "Device: CORE-RTR-01 | IP: 10.0.0.1 | Role: Core Router | Status: UP"
 #
-def swap_pair(pair):
+def unpack_device_record(record):
     pass
 
 

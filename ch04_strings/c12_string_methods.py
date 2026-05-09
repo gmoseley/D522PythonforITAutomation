@@ -57,28 +57,35 @@ def normalize_hostname(hostname):
 
 
 
-# ─── Ch04 | Challenge 9: WGU Style — Mask the Last Octet ─────────────────────
-# Complete the Python function mask_ip.
-# The function should accept an IPv4 address string, replace everything after
-# the last dot with "xxx", and return the masked IP.
+# ─── Ch04 | Challenge 9: WGU Style — Redact Password ────────────────────────
+# Complete the Python function redact_password.
+# The function should accept a log line string like
+# "auth failed password=secret123 for user admin", find the value after
+# "password=" and replace it with "****". Return the redacted line.
+# Hint: use split() to find the token starting with "password=", then replace it.
 #
-# Example: mask_ip("192.168.1.105") → "192.168.1.xxx"
-# Example: mask_ip("10.0.0.254") → "10.0.0.xxx"
+# Example: redact_password("auth failed password=secret123 for user admin")
+#          → "auth failed password=**** for user admin"
+# Example: redact_password("login password=abc99 accepted")
+#          → "login password=**** accepted"
 #
-def mask_ip(ip):
+def redact_password(log_line):
     pass
 
 
 
-# ─── Ch04 | Challenge 10: WGU Style — Count a Keyword ────────────────────────
-# Complete the Python function count_keyword.
-# The function should accept a log_line string and a keyword string,
-# and return an integer count of how many times keyword appears in log_line.
-# The search should be case-insensitive.
+# ─── Ch04 | Challenge 10: WGU Style — Validate ID ────────────────────────────
+# Complete the Python function validate_id.
+# The function should accept a string and return True if ALL of these are true:
+#   - Total length is exactly 8 characters
+#   - First 3 characters are all uppercase letters
+#   - Last 5 characters are all digits
+# Return False otherwise.
 #
-# Example: count_keyword("ERROR error Error ok", "error") → 3
-# Example: count_keyword("INFO: startup complete", "error") → 0
+# Example: validate_id("HRD00123") → True
+# Example: validate_id("Ops123456") → False
+# Example: validate_id("HRD0012") → False
 #
-def count_keyword(log_line, keyword):
+def validate_id(employee_id):
     pass
 

@@ -86,13 +86,17 @@ def usable_hosts(prefix_length):
 
 
 
-# ─── Ch05 | Challenge 10: WGU Style — In Range Check ─────────────────────────
-# Complete the Python function is_in_range.
-# The function should accept a value, low, and high (all integers),
-# and return True if value is between low and high inclusive, otherwise False.
+# ─── Ch05 | Challenge 10: WGU Style — Same Subnet ────────────────────────────
+# Complete the Python function same_subnet.
+# The function should accept two IP address strings and a subnet mask string.
+# Apply the subnet mask to both IPs using bitwise AND: convert each octet to int,
+# AND it with the corresponding mask octet, then compare the results.
+# Return "ip1 and ip2 are in the same subnet" or "ip1 and ip2 are not in the same subnet".
 #
-# Example: is_in_range(443, 1, 65535) → True
-# Example: is_in_range(0, 1, 65535) → False
+# Example: same_subnet("192.168.1.100", "192.168.1.200", "255.255.255.0")
+#          → "192.168.1.100 and 192.168.1.200 are in the same subnet"
+# Example: same_subnet("192.168.1.100", "192.168.2.200", "255.255.255.0")
+#          → "192.168.1.100 and 192.168.2.200 are not in the same subnet"
 #
-def is_in_range(value, low, high):
+def same_subnet(ip1, ip2, mask):
     pass

@@ -41,40 +41,45 @@ print(log_id[4:10])
 
 
 
-# ─── Ch04 | Challenge 8: WGU Style — Get the Site Code ───────────────────────
-# Complete the Python function get_site_code.
-# The function should accept a hostname string formatted as "TYPE-##-SITE",
-# extract and return the site name (everything after the last dash).
+# ─── Ch04 | Challenge 8: WGU Style — Get Device Prefix ──────────────────────
+# Complete the Python function get_device_prefix.
+# The function should accept a hostname string like "RTR-01-FARGO" and return
+# just the prefix — everything before the first dash. Use split.
 #
-# Example: get_site_code("ROUTER-01-FARGO") → "FARGO"
-# Example: get_site_code("SW-02-DALLAS") → "DALLAS"
+# Example: get_device_prefix("RTR-01-FARGO") → "RTR"
+# Example: get_device_prefix("SW-CORE-01") → "SW"
 #
-def get_site_code(hostname):
+def get_device_prefix(hostname):
     pass
 
 
 
-# ─── Ch04 | Challenge 9: WGU Style — Truncate Log ID ─────────────────────────
-# Complete the Python function truncate_log_id.
-# The function should accept a log_id string and an integer max_length,
-# and return only the first max_length characters of the log_id.
+# ─── Ch04 | Challenge 9: WGU Style — Build Reverse DNS ───────────────────────
+# Complete the Python function build_reverse_dns.
+# The function should accept an IPv4 address string like "192.168.1.10",
+# reverse the order of the octets, append ".in-addr.arpa", and return the result.
+# Use split, reverse (or slicing), and join.
 #
-# Example: truncate_log_id("LOG-20240115-CRITICAL-RTR01", 10) → "LOG-202401"
-# Example: truncate_log_id("LOG-20240115-CRITICAL-RTR01", 3) → "LOG"
+# Example: build_reverse_dns("192.168.1.10") → "10.1.168.192.in-addr.arpa"
+# Example: build_reverse_dns("10.0.0.1") → "1.0.0.10.in-addr.arpa"
 #
-def truncate_log_id(log_id, max_length):
+def build_reverse_dns(ip):
     pass
 
 
 
-# ─── Ch04 | Challenge 10: WGU Style — Reverse the Octets ─────────────────────
-# Complete the Python function reverse_ip_octets.
-# The function should accept an IPv4 address string, split it into octets,
-# reverse the order of the octets, and return them joined back with dots.
+# ─── Ch04 | Challenge 10: WGU Style — Same Subnet ────────────────────────────
+# Complete the Python function same_subnet.
+# The function should accept two IP address strings and a subnet mask string.
+# Apply the subnet mask to both IPs using bitwise AND: convert each octet to int,
+# AND it with the corresponding mask octet, then compare the results.
+# Return "ip1 and ip2 are in the same subnet" or "ip1 and ip2 are not in the same subnet".
 #
-# Example: reverse_ip_octets("192.168.1.105") → "105.1.168.192"
-# Example: reverse_ip_octets("10.0.0.254") → "254.0.0.10"
+# Example: same_subnet("192.168.1.100", "192.168.1.200", "255.255.255.0")
+#          → "192.168.1.100 and 192.168.1.200 are in the same subnet"
+# Example: same_subnet("192.168.1.100", "192.168.2.200", "255.255.255.0")
+#          → "192.168.1.100 and 192.168.2.200 are not in the same subnet"
 #
-def reverse_ip_octets(ip):
+def same_subnet(ip1, ip2, mask):
     pass
 

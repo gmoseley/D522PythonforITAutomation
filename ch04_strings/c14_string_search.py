@@ -52,28 +52,30 @@ for i in log_lines:
         print(i)
 
 
-# ─── Ch04 | Challenge 7: WGU Style — Flag Critical Events ────────────────────
-# Complete the Python function is_critical_event.
-# The function should accept a log_line string and return True if it contains
-# "CRITICAL" or "ERROR" (case-sensitive), otherwise return False.
+# ─── Ch04 | Challenge 7: WGU Style — Get Log Severity ───────────────────────
+# Complete the Python function get_log_severity.
+# The function should accept a log string and return the severity level found in it.
+# Check in this priority order: "CRITICAL", "ERROR", "WARNING", "INFO".
+# Return the first one found. If none are found, return "UNKNOWN".
 #
-# Example: is_critical_event("CRITICAL: Core switch unreachable") → True
-# Example: is_critical_event("INFO: System startup complete") → False
+# Example: get_log_severity("CRITICAL: core switch down") → "CRITICAL"
+# Example: get_log_severity("INFO: startup complete") → "INFO"
+# Example: get_log_severity("System rebooted") → "UNKNOWN"
 #
-def is_critical_event(log_line):
+def get_log_severity(log_line):
     pass
 
 
 
-# ─── Ch04 | Challenge 8: WGU Style — Extract the IP ─────────────────────────
-# Complete the Python function extract_ip.
-# The function should accept a log_line string that contains an IPv4 address
-# somewhere in it. Find the position of the first digit that starts an IP,
-# and return just the IP address substring.
-# Hint: use .split() and check each token with .replace('.','').isdigit()
+# ─── Ch04 | Challenge 8: WGU Style — Identify High CPU ──────────────────────
+# Complete the Python function identify_high_cpu.
+# The function should accept a list of floats representing CPU usage percentages.
+# Return a list of INTEGER INDICES (not the values themselves) where CPU usage
+# is greater than 90.0.
 #
-# Example: extract_ip("Device 192.168.1.105 unreachable") → "192.168.1.105"
-# Example: extract_ip("Blocked host 10.0.0.5 on port 22") → "10.0.0.5"
+# Example: identify_high_cpu([85.0, 92.5, 88.0, 95.2]) → [1, 3]
+# Example: identify_high_cpu([91.0, 88.8]) → [0]
+# Example: identify_high_cpu([80.0, 85.0]) → []
 #
-def extract_ip(log_line):
+def identify_high_cpu(cpu_list):
     pass

@@ -92,17 +92,15 @@ def validate_port(port):
 
 
 
-# ─── Ch11 | Challenge 13: WGU Style — Parse Severity ────────────────────────
-# Complete the Python function parse_severity.
-# The function should accept a log_line string and check if it contains
-# "INFO", "WARNING", "ERROR", or "CRITICAL".
-# Return the matched severity string. If none found, raise a ValueError
-# with the message "No severity found".
+# ─── Ch11 | Challenge 13: WGU Style — Line Count ────────────────────────────
+# Complete the Python function line_count.
+# The function should accept a filename string, open the file, read its contents,
+# and return the number of lines as an integer.
+# This matches exact WGU assessment question 23.
 #
-# Example: parse_severity("ERROR: device unreachable") → "ERROR"
-# Example: parse_severity("unknown message") → raises ValueError: "No severity found"
+# Example: line_count("network_log.txt") → 3   (if the file has 3 lines)
 #
-def parse_severity(log_line):
+def line_count(filename):
     pass
 
 
