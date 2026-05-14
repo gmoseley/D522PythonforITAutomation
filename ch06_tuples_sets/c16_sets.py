@@ -1,42 +1,163 @@
 # ─── Ch06 | Challenge 1: VLAN Registry ───────────────────────────────────────
-# Create a set of these VLAN IDs and print it: 10, 20, 30, 40, 50
+# Create a set of these VLAN IDs and assign it to vlans, then print it
+# 10, 20, 30, 40, 50
 
 
 
 # ─── Ch06 | Challenge 2: Add a VLAN, Drop a VLAN ────────────────────────────
-# Add VLAN 60 to the set, then remove VLAN 10 — print the result
+# Add VLAN 60 to vlans, then remove VLAN 10 — print the result
+vlans = {10, 20, 30, 40, 50}
 
 
 
 # ─── Ch06 | Challenge 3: Is This VLAN Active? ────────────────────────────────
-# Check if vlan_id is in the set — print "Active" or "Not found"
-#vlan_id = 30
+# Check if vlan_id is in vlans — print "Active" or "Not found"
+vlans = {10, 20, 30, 40, 50}
+vlan_id = 30
 
 
 
 # ─── Ch06 | Challenge 4: Two Sites, One Network ──────────────────────────────
-# Print the union (all VLANs combined) and intersection (VLANs on both sites)
-#site_a = {10, 20, 30, 40}
-#site_b = {30, 40, 50, 60}
+# Print the union (all VLANs on either site) and intersection (VLANs on both)
+site_a = {10, 20, 30, 40}
+site_b = {30, 40, 50, 60}
 
 
 
 # ─── Ch06 | Challenge 5: No Duplicates Allowed ───────────────────────────────
-# Convert dhcp_log to a set to remove duplicate IPs, then print the unique ones
-#dhcp_log = ["10.0.0.5", "10.0.0.12", "10.0.0.5", "10.0.0.8", "10.0.0.12", "10.0.0.5"]
+# Convert dhcp_log to a set to deduplicate — print the unique IPs
+dhcp_log = ["10.0.0.5", "10.0.0.12", "10.0.0.5", "10.0.0.8", "10.0.0.12", "10.0.0.5"]
 
 
 
 # ─── Ch06 | Challenge 6: Lock It Down ────────────────────────────────────────
-# Create a frozenset from core_vlans, try to add 99 — catch the error and print a message
-#core_vlans = frozenset({10, 20, 30})
+# Create a frozenset from core_vlans, try to add 99 — catch the AttributeError and print a message
+core_vlans = frozenset({10, 20, 30})
 
 
 
-# ─── Ch06 | Challenge 7: WGU Style — Shared VLANs ───────────────────────────
+# ─── Ch06 | Challenge 7: Discard vs Remove ───────────────────────────────────
+# Try removing vlan 99 from vlans using .remove() — catch the KeyError
+# Then try again with .discard() — notice no error this time
+vlans = {10, 20, 30, 40, 50}
+
+
+
+# ─── Ch06 | Challenge 8: Difference ─────────────────────────────────────────
+# Print the VLANs that are in site_a but NOT in site_b (the difference)
+# Then print VLANs that are in site_b but NOT in site_a
+site_a = {10, 20, 30, 40}
+site_b = {30, 40, 50, 60}
+
+
+
+# ─── Ch06 | Challenge 9: Symmetric Difference ────────────────────────────────
+# Print the VLANs that are on one site but not both (symmetric difference)
+site_a = {10, 20, 30, 40}
+site_b = {30, 40, 50, 60}
+
+
+
+# ─── Ch06 | Challenge 10: Subset Check ───────────────────────────────────────
+# Check if required_vlans is a subset of configured_vlans — print True or False
+required_vlans = {10, 20, 30}
+configured_vlans = {10, 20, 30, 40, 50}
+
+
+
+# ─── Ch06 | Challenge 11: Superset Check ─────────────────────────────────────
+# Check if configured_vlans is a superset of required_vlans — print True or False
+required_vlans = {10, 20, 30}
+configured_vlans = {10, 20, 30, 40, 50}
+
+
+
+# ─── Ch06 | Challenge 12: Disjoint Check ─────────────────────────────────────
+# Check if allowed_ips and blocked_ips share no IPs — print "Clean" or "Conflict"
+allowed_ips = {"10.0.0.1", "10.0.0.2", "10.0.0.3"}
+blocked_ips = {"192.168.1.1", "172.16.0.1"}
+
+
+
+# ─── Ch06 | Challenge 13: Set from String ────────────────────────────────────
+# Build a set of unique characters in hostname and print how many unique chars it has
+hostname = "ROUTER-01-FARGO"
+
+
+
+# ─── Ch06 | Challenge 14: Sorted Set ─────────────────────────────────────────
+# Print the vlans set as a sorted list (sets have no order — use sorted())
+vlans = {40, 10, 50, 20, 30}
+
+
+
+# ─── Ch06 | Challenge 15: Pop an Element ─────────────────────────────────────
+# Pop one element from vlans and print what was removed, then print the remaining set
+# Note: pop() removes an arbitrary element from a set
+vlans = {10, 20, 30, 40, 50}
+
+
+
+# ─── Ch06 | Challenge 16: Union Assignment ───────────────────────────────────
+# Use |= to add all VLANs from new_vlans into existing_vlans in-place — print the result
+existing_vlans = {10, 20, 30}
+new_vlans = {30, 40, 50}
+
+
+
+# ─── Ch06 | Challenge 17: Intersection Assignment ────────────────────────────
+# Use &= to keep only VLANs present in both sets — print the result
+configured = {10, 20, 30, 40}
+required   = {20, 30, 50}
+
+
+
+# ─── Ch06 | Challenge 18: Deduplicate and Count ──────────────────────────────
+# Convert access_log to a set to find unique IPs, then print the count
+access_log = [
+    "10.0.0.5", "10.0.0.12", "10.0.0.5",
+    "10.0.0.8", "10.0.0.12", "10.0.0.5",
+    "172.16.0.1", "10.0.0.8",
+]
+
+
+
+# ─── Ch06 | Challenge 19: Find Missing VLANs ─────────────────────────────────
+# Print the VLANs that are required but missing from configured — sorted
+required   = {10, 20, 30, 40, 50}
+configured = {10, 30, 50}
+
+
+
+# ─── Ch06 | Challenge 20: Set Comprehension ──────────────────────────────────
+# Build a set of all unique first octets from the ip_list using a set comprehension
+# Split each IP on "." and take the first element
+ip_list = ["192.168.1.1", "10.0.0.1", "192.168.2.5", "10.1.0.1", "172.16.0.1"]
+
+
+
+# ─── Ch06 | Challenge 21: Membership Test Performance ────────────────────────
+# Check whether each IP in to_check is in the allowed set — print "Allowed" or "Blocked"
+# (Sets use O(1) lookup — much faster than lists for large data)
+allowed = {"10.0.0.1", "10.0.0.2", "192.168.1.100"}
+to_check = ["10.0.0.1", "172.16.0.5", "192.168.1.100", "10.0.0.99"]
+
+
+
+# ─── Ch06 | Challenge 22: Aggregate Set Operations ───────────────────────────
+# Given three site VLAN sets, find:
+#   - VLANs present at ALL three sites (intersection of all three)
+#   - VLANs present at ANY site (union of all three)
+#   - VLANs unique to site_a (difference with the union of the other two)
+site_a = {10, 20, 30, 40}
+site_b = {20, 30, 50, 60}
+site_c = {30, 40, 60, 70}
+
+
+
+# ─── Ch06 | Challenge 23: WGU Style — Shared VLANs ──────────────────────────
 # Complete the Python function get_shared_vlans.
-# The function should accept two sets of VLAN IDs, return a sorted list
-# of VLANs that appear in both sets (the intersection).
+# Accept two sets of VLAN IDs and return a sorted list of VLANs in both sets.
 #
 # Example: get_shared_vlans({10, 20, 30}, {20, 30, 40}) → [20, 30]
 # Example: get_shared_vlans({10, 20}, {30, 40}) → []
@@ -46,13 +167,12 @@ def get_shared_vlans(site_a, site_b):
 
 
 
-# ─── Ch06 | Challenge 8: WGU Style — Find Unauthorized IPs ──────────────────
+# ─── Ch06 | Challenge 24: WGU Style — Find Unauthorized IPs ─────────────────
 # Complete the Python function find_unauthorized_ips.
-# The function should accept a list of IP strings (logged_ips) and a set of
-# allowed IPs (allowed_ips). Return a sorted list of IPs from logged_ips that
-# are NOT in allowed_ips — deduplicated (no repeats in the result).
+# Accept a list of IP strings (logged_ips) and a set of allowed IPs.
+# Return a sorted, deduplicated list of IPs from logged_ips not in allowed_ips.
 #
-# Example: find_unauthorized_ips(["10.0.0.5", "10.0.0.1", "10.0.0.5"], {"10.0.0.1"})
+# Example: find_unauthorized_ips(["10.0.0.5","10.0.0.1","10.0.0.5"], {"10.0.0.1"})
 #          → ["10.0.0.5"]
 # Example: find_unauthorized_ips(["10.0.0.1"], {"10.0.0.1"}) → []
 #
@@ -60,3 +180,14 @@ def find_unauthorized_ips(logged_ips, allowed_ips):
     pass
 
 
+
+# ─── Ch06 | Challenge 25: WGU Style — Missing VLANs ─────────────────────────
+# Complete the Python function missing_vlans.
+# Accept a set of required VLAN IDs and a set of configured VLAN IDs.
+# Return a sorted list of VLANs that are required but not yet configured.
+#
+# Example: missing_vlans({10, 20, 30}, {10, 30}) → [20]
+# Example: missing_vlans({10, 20}, {10, 20, 30}) → []
+#
+def missing_vlans(required, configured):
+    pass

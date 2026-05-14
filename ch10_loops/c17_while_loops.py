@@ -10,6 +10,7 @@
 
 # ─── Ch10 | Challenge 3: Break on Command ────────────────────────────────────
 # Keep prompting the user for input — break out of the loop when they type "quit"
+# Print "Goodbye!" when the loop ends
 
 
 
@@ -19,42 +20,152 @@
 
 
 # ─── Ch10 | Challenge 5: Keep Asking ─────────────────────────────────────────
-# Use while True to keep asking for a number — only exit when input is a valid int
+# Use while True to keep asking for a number — exit only when input is a valid integer
+# Print "Got it: {number}" when valid input is received
 
 
 
 # ─── Ch10 | Challenge 6: Retry Logic ─────────────────────────────────────────
-# Simulate connection retries — loop up to max_retries, print each attempt, then "Failed"
-#max_retries = 3
-#host = "10.0.0.254"
+# Simulate connection retries — loop up to max_retries, print each attempt number,
+# then print "Connection failed after {max_retries} attempts"
+max_retries = 3
+host = "10.0.0.254"
 
 
 
 # ─── Ch10 | Challenge 7: While vs For ────────────────────────────────────────
-# Sum all numbers 1-100 using a while loop, then again using a for loop — compare results
+# Sum all numbers 1–100 using a while loop, then again using a for loop
+# Print both results and confirm they match
 
 
 
 # ─── Ch10 | Challenge 8: Poll Until Ready ────────────────────────────────────
-# Simulate polling a device status — loop until status is "UP", incrementing attempts
-# Use a counter to break after 5 attempts if it never comes UP
-#import random
-#def get_status(): return random.choice(["DOWN", "DOWN", "UP"])  # simulated
+# Simulate polling a device — loop until status is "UP", incrementing an attempt counter
+# Break after 5 attempts if it never comes UP, printing "Gave up after 5 attempts"
+# Use a counter variable; simulate status change by toggling after 3 tries
+import random
+def get_status():
+    return random.choice(["DOWN", "DOWN", "UP"])
 
 
 
 # ─── Ch10 | Challenge 9: Menu Loop ───────────────────────────────────────────
-# Build a simple text menu that keeps running until the user picks "Exit"
+# Build a text menu that keeps running until the user picks 3 (Exit)
 # Options: 1) Show devices  2) Show logs  3) Exit
+# Print a message for options 1 and 2; break cleanly on 3
 
 
 
-# ─── Ch10 | Challenge 10: WGU Style — Sum to N ───────────────────────────────
+# ─── Ch10 | Challenge 10: Accumulate Until Threshold ────────────────────────
+# Add packet sizes one by one until the total exceeds buffer_limit
+# Print each running total, then print "Buffer full at: {total}"
+buffer_limit = 1500
+packet_sizes = [200, 400, 300, 500, 150, 250, 600]
+
+
+
+# ─── Ch10 | Challenge 11: Find First Match ───────────────────────────────────
+# Use a while loop to scan devices for the first one with status "DOWN"
+# Print its hostname, or "All UP" if none found
+devices = [
+    ("RTR-01", "UP"),
+    ("SW-01",  "UP"),
+    ("FW-01",  "DOWN"),
+    ("AP-01",  "UP"),
+]
+
+
+
+# ─── Ch10 | Challenge 12: Drain a Queue ──────────────────────────────────────
+# Use a while loop with .pop(0) to process items from the front of the queue
+# Print "Processing: {item}" for each, stop when the queue is empty
+queue = ["task_backup", "task_patch", "task_reboot", "task_audit"]
+
+
+
+# ─── Ch10 | Challenge 13: Collect Valid Inputs ───────────────────────────────
+# Keep asking for a hostname — add it to a list if it starts with "RTR", "SW", or "FW"
+# Stop after 4 valid entries, then print the collected list
+# (For testing, simulate input by iterating through a predefined list instead of input())
+inputs = ["RTR-01", "LAPTOP-5", "SW-02", "unknown", "FW-03", "RTR-02"]
+
+
+
+# ─── Ch10 | Challenge 14: Nested While Loop ──────────────────────────────────
+# Use nested while loops to print a 3×3 grid of "row,col" coordinates
+# e.g., "0,0  0,1  0,2 / 1,0 ..."  (one row per line)
+
+
+
+# ─── Ch10 | Challenge 15: Running Average ────────────────────────────────────
+# Loop through cpu_readings — keep a running total and count
+# After all readings, print the average formatted to 1 decimal place
+cpu_readings = [72.5, 88.1, 65.3, 91.2, 77.8, 84.0, 69.5]
+
+
+
+# ─── Ch10 | Challenge 16: While with Index ───────────────────────────────────
+# Use a while loop with a manual index variable to print only even-indexed items
+# from the log_lines list (index 0, 2, 4…)
+log_lines = [
+    "INFO: startup",
+    "WARNING: high cpu",
+    "ERROR: link down",
+    "INFO: backup ok",
+    "CRITICAL: disk full",
+    "INFO: patch applied",
+]
+
+
+
+# ─── Ch10 | Challenge 17: Bounded Retry with Backoff ────────────────────────
+# Simulate retrying a connection — attempt up to max_retries times
+# Print "Attempt {n}..." each time, then "Connected!" if attempt < 3 else "Failed"
+# (Simulate success on attempt 3)
+max_retries = 5
+
+
+
+# ─── Ch10 | Challenge 18: Process Until Sentinel ─────────────────────────────
+# Process commands from the list until you hit "EXIT"
+# Print "Running: {cmd}" for each valid command; stop and print "Session ended" on EXIT
+commands = ["SHOW INTERFACES", "SHOW ROUTE", "PING 10.0.0.1", "EXIT", "SHOW VLAN"]
+
+
+
+# ─── Ch10 | Challenge 19: Build a Result List ────────────────────────────────
+# Use a while loop to build a list of squared values for numbers 1 through 10
+# Print the result list
+
+
+
+# ─── Ch10 | Challenge 20: Two-Pointer Convergence ────────────────────────────
+# Use two index variables (lo and hi) — increment lo and decrement hi each iteration
+# Stop when they meet or cross — print "lo={lo}, hi={hi}" each step
+lo = 0
+hi = 9
+
+
+
+# ─── Ch10 | Challenge 21: Simulate a Packet Window ──────────────────────────
+# Use a while loop to slide a window of size 3 across packet_log and print each window
+# e.g., window 0: [p0, p1, p2], window 1: [p1, p2, p3], ...
+packet_log = [100, 200, 150, 300, 250, 180, 220]
+
+
+
+# ─── Ch10 | Challenge 22: While with Break and Else ─────────────────────────
+# Search devices for hostname "FW-EDGE-01" using a while loop
+# Use break when found — use the while/else clause to print "Not found" if the loop completes
+devices = ["RTR-01", "SW-01", "AP-01", "FW-CORE-01", "FW-EDGE-01"]
+
+
+
+# ─── Ch10 | Challenge 23: WGU Style — Sum to N ───────────────────────────────
 # Complete the Python function sum_to_n.
-# The function should accept a positive integer n, use a while loop to sum
-# all integers from 1 through n (inclusive), and return the total.
+# Accept a positive integer n, use a while loop to sum 1 through n, return the total.
 #
-# Example: sum_to_n(5) → 15   (1+2+3+4+5)
+# Example: sum_to_n(5) → 15
 # Example: sum_to_n(10) → 55
 #
 def sum_to_n(n):
@@ -62,38 +173,23 @@ def sum_to_n(n):
 
 
 
-# ─── Ch10 | Challenge 11: WGU Style — Collect Even Numbers ───────────────────
+# ─── Ch10 | Challenge 24: WGU Style — Collect Even Numbers ──────────────────
 # Complete the Python function collect_evens.
-# The function should accept a positive integer limit, use a while loop to
-# collect all even numbers from 2 up to and including limit (if even),
-# and return them as a list.
+# Accept a positive integer limit, use a while loop to collect all even numbers
+# from 2 up to and including limit (if even), return them as a list.
 #
 # Example: collect_evens(10) → [2, 4, 6, 8, 10]
-# Example: collect_evens(7) → [2, 4, 6]
+# Example: collect_evens(7)  → [2, 4, 6]
 #
 def collect_evens(limit):
     pass
 
 
 
-# ─── Ch10 | Challenge 12: WGU Style — Count Down List ───────────────────────
-# Complete the Python function count_down_list.
-# The function should accept a positive integer start, use a while loop to
-# build a list counting down from start to 1 (inclusive), and return the list.
-#
-# Example: count_down_list(5) → [5, 4, 3, 2, 1]
-# Example: count_down_list(3) → [3, 2, 1]
-#
-def count_down_list(start):
-    pass
-
-
-
-# ─── Ch10 | Challenge 13: WGU Style — Identify High CPU ─────────────────────
+# ─── Ch10 | Challenge 25: WGU Style — Identify High CPU ─────────────────────
 # Complete the Python function identify_high_cpu.
-# The function should accept a list of floats representing CPU usage percentages.
-# Return a list of INTEGER INDICES (not the values themselves) where CPU usage
-# is greater than 90.0. Use a while loop (not a for loop).
+# Accept a list of floats representing CPU usage percentages.
+# Return a list of INTEGER INDICES where CPU > 90.0. Use a while loop (not for).
 #
 # Example: identify_high_cpu([85.0, 92.5, 88.0, 95.2]) → [1, 3]
 # Example: identify_high_cpu([91.0, 88.8]) → [0]
@@ -101,5 +197,3 @@ def count_down_list(start):
 #
 def identify_high_cpu(cpu_list):
     pass
-
-

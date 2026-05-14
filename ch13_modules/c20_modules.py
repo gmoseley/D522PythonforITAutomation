@@ -1,56 +1,57 @@
 # ─── Ch13 | Challenge 1: Know Your Environment ───────────────────────────────
-# Use os to print: current working directory and a list of files in that directory
-#import os
+# Use os to print: current working directory and a sorted list of .py files in it
+import os
 
 
 
 # ─── Ch13 | Challenge 2: System Info ─────────────────────────────────────────
-# Use sys to print the Python version and the OS platform this is running on
-#import sys
+# Use sys to print the Python version string and the OS platform
+import sys
 
 
 
 # ─── Ch13 | Challenge 3: What Time Is It? ────────────────────────────────────
 # Print the current date and time formatted as: "2024-01-15 10:23:45"
-#from datetime import datetime
+from datetime import datetime
 
 
 
 # ─── Ch13 | Challenge 4: Roll the Dice ───────────────────────────────────────
-# Simulate rolling a 6-sided die 5 times — print each result
-#import random
+# Simulate rolling a 6-sided die 5 times — print each result on one line
+import random
 
 
 
 # ─── Ch13 | Challenge 5: Find the IP ─────────────────────────────────────────
-# Use re to extract the IP address from log_line and print it
-#import re
-#log_line = "2024-01-15 10:23:45 - Device 192.168.1.105 unreachable - check routing"
+# Use re to extract the first IP address from log_line and print it
+import re
+log_line = "2024-01-15 10:23:45 - Device 192.168.1.105 unreachable - check routing"
 
 
 
-# ─── Ch13 | Challenge 6: Read a Config ───────────────────────────────────────
-# Write device_config to device_config.json, read it back, print only the ip value
-#import json
-#device_config = {"hostname": "CORE-RTR-01", "ip": "10.0.0.1", "role": "core"}
+# ─── Ch13 | Challenge 6: Read a JSON Config ──────────────────────────────────
+# Write device_config to "device_config.json", read it back, print only the "ip" value
+import json
+device_config = {"hostname": "CORE-RTR-01", "ip": "10.0.0.1", "role": "core"}
 
 
 
 # ─── Ch13 | Challenge 7: Walk the Directory ──────────────────────────────────
-# Use os.walk() to print every file in the Python project folder (non-recursive is fine)
-#import os
+# Use os.walk() to print every .py file found under the project root (non-recursive is fine)
+import os
+root = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCClaude"
 
 
 
 # ─── Ch13 | Challenge 8: Build a Timestamp Filename ─────────────────────────
 # Use datetime to generate a log filename like: "log_20240115_102345.txt" and print it
-#from datetime import datetime
+from datetime import datetime
 
 
 
 # ─── Ch13 | Challenge 9: Pick a Random Device ────────────────────────────────
-# Load devices.txt into a list, use random.choice() to pick one and print it
-#import random
+# Create a list of 5 device hostnames, use random.choice() to pick one and print it
+import random
 
 
 
@@ -58,14 +59,116 @@
 # Create helpers.py in this folder with two functions:
 #   - ping_check(ip): prints "Pinging {ip}..."
 #   - categorize(hostname): returns "Router", "Switch", "Firewall", or "Unknown"
-# Import helpers here and call both functions
+# Import helpers here and call both functions with sample values
 
 
 
-# ─── Ch13 | Challenge 11: WGU Style — Get File Extension ────────────────────
+# ─── Ch13 | Challenge 11: os.path Deep Dive ──────────────────────────────────
+# For log_path, print: the filename only, the directory only, the extension,
+# the path without extension, and whether the file exists
+import os
+log_path = "/var/log/network/core_switch_2024.log"
+
+
+
+# ─── Ch13 | Challenge 12: Shuffle and Sample ─────────────────────────────────
+# Shuffle devices in place, then pick a random sample of 3 without repeats — print both
+import random
+devices = ["RTR-01", "SW-01", "FW-01", "AP-01", "RTR-02", "SW-02"]
+
+
+
+# ─── Ch13 | Challenge 13: Parse a Date String ────────────────────────────────
+# Parse date_str into a datetime object using strptime, then print just the year and month
+from datetime import datetime
+date_str = "15/01/2024 10:23:45"
+
+
+
+# ─── Ch13 | Challenge 14: Days Between Dates ─────────────────────────────────
+# Calculate and print the number of days between start_date and end_date
+from datetime import datetime
+start_date = "2024-01-01"
+end_date = "2024-03-15"
+
+
+
+# ─── Ch13 | Challenge 15: Find All IPs in a Block of Text ────────────────────
+# Use re.findall() to extract every IP address from log_block and print the list
+import re
+log_block = """
+RTR-01 at 10.0.0.1 connected to SW-01 at 10.0.0.2
+FW-01 at 203.0.113.1 blocked traffic from 198.51.100.5
+AP-01 at 192.168.1.10 associated 192.168.1.55
+"""
+
+
+
+# ─── Ch13 | Challenge 16: Environment Variable ───────────────────────────────
+# Use os.environ.get() to read the "PATH" environment variable — print the first entry
+# (split on ";" on Windows, ":" on Linux/Mac)
+import os
+
+
+
+# ─── Ch13 | Challenge 17: Regex Match vs Search ──────────────────────────────
+# Use re.match() to check if line starts with a date pattern "YYYY-MM-DD"
+# Use re.search() to find "ERROR" anywhere in the line — print both results
+import re
+line = "2024-01-15 10:23:45 ERROR - Link down on RTR-01"
+
+
+
+# ─── Ch13 | Challenge 18: JSON List ──────────────────────────────────────────
+# Write device_list to "devices.json", read it back, and print each device's hostname
+import json
+device_list = [
+    {"hostname": "RTR-01", "ip": "10.0.0.1"},
+    {"hostname": "SW-01",  "ip": "10.0.0.2"},
+    {"hostname": "FW-01",  "ip": "10.0.0.3"},
+]
+
+
+
+# ─── Ch13 | Challenge 19: Format a Timestamp ─────────────────────────────────
+# Print now in three different formats:
+#   - ISO 8601:     "2024-01-15T10:23:45"
+#   - Human-friendly: "January 15, 2024 10:23 AM"
+#   - Log filename: "log_20240115_102345.txt"
+from datetime import datetime
+
+
+
+# ─── Ch13 | Challenge 20: Regex Named Groups ─────────────────────────────────
+# Use a regex with named groups to parse log_line into timestamp, level, and message
+# Pattern hint: (?P<name>...)
+import re
+log_line = "2024-01-15 10:23:45 [ERROR] Core switch unreachable"
+
+
+
+# ─── Ch13 | Challenge 21: sys.argv Preview ───────────────────────────────────
+# Print a usage message showing how this script would be called from the command line
+# Then print each argument from sys.argv with its index
+# (Run as: python c20_modules.py arg1 arg2)
+import sys
+
+
+
+# ─── Ch13 | Challenge 22: Combine datetime + re + os ────────────────────────
+# Get the current datetime formatted as "YYYYMMDD_HHMMSS"
+# Use re.sub() to replace any non-alphanumeric characters in hostname with "_"
+# Build and print a log filename: "{sanitized_hostname}_{timestamp}.log"
+from datetime import datetime
+import re
+hostname = "CORE-RTR 01"
+
+
+
+# ─── Ch13 | Challenge 23: WGU Style — Get File Extension ────────────────────
 # Complete the Python function get_file_extension.
-# The function should accept a filename string and return just the file extension
-# including the dot. Use os.path.splitext().
+# Accept a filename string and return just the file extension including the dot.
+# Use os.path.splitext().
 #
 # Example: get_file_extension("network_log.txt") → ".txt"
 # Example: get_file_extension("config.json") → ".json"
@@ -76,11 +179,10 @@ def get_file_extension(filename):
 
 
 
-# ─── Ch13 | Challenge 12: WGU Style — Days Since Date ───────────────────────
+# ─── Ch13 | Challenge 24: WGU Style — Days Since Date ───────────────────────
 # Complete the Python function days_since.
-# The function should accept a date string formatted as "YYYY-MM-DD",
-# parse it using datetime.strptime, and return the number of days between that
-# date and today (datetime.now()) as an integer.
+# Accept a date string formatted as "YYYY-MM-DD", parse it with strptime,
+# and return the number of days between that date and today as an integer.
 #
 # Example: days_since("2024-01-01") → (some positive integer, grows over time)
 #
@@ -90,32 +192,15 @@ def days_since(date_string):
 
 
 
-# ─── Ch13 | Challenge 13: WGU Style — Extract All IPs ───────────────────────
-# Complete the Python function extract_all_ips.
-# The function should accept a text string and use re.findall() with the pattern
-# r'\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b' to find all IPv4 addresses.
-# Return them as a list.
-#
-# Example: extract_all_ips("Host 10.0.0.1 and 192.168.1.5 down") → ["10.0.0.1", "192.168.1.5"]
-# Example: extract_all_ips("No IPs here") → []
-#
-import re
-def extract_all_ips(text):
-    pass
-
-
-
-# ─── Ch13 | Challenge 14: WGU Style — Find Latest ───────────────────────────
+# ─── Ch13 | Challenge 25: WGU Style — Find Latest Datetime ──────────────────
 # Complete the Python function find_latest.
-# The function should accept an unordered list of datetime strings, parse each one
-# using the format "%m/%d/%Y %I:%M %p", and return the most recent as a datetime object.
-# Use max() with a key or on the parsed list.
-# This matches exact WGU assessment question 29.
+# Accept a list of datetime strings in format "%m/%d/%Y %I:%M %p".
+# Parse each and return the most recent as a datetime object.
+# Use max() on the parsed list.
 #
 # Example: find_latest(['12/15/2023 08:45 AM', '12/16/2023 11:20 AM'])
 #          → datetime(2023, 12, 16, 11, 20)
 #
+from datetime import datetime
 def find_latest(upload_times):
     pass
-
-

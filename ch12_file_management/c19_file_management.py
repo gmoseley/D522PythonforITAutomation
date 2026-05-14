@@ -1,65 +1,158 @@
 # ─── Ch12 | Challenge 1: Write a Log ─────────────────────────────────────────
-# Write log_entries to network_log.txt — one entry per line
-#log_entries = [
-#    "2024-01-15 10:00 - RTR-01 connection UP",
-#    "2024-01-15 10:01 - SW-01 port DOWN",
-#    "2024-01-15 10:02 - FW-01 policy applied",
-#]
+# Write log_entries to "network_log.txt" — one entry per line
+log_entries = [
+    "2024-01-15 10:00 - RTR-01 connection UP",
+    "2024-01-15 10:01 - SW-01 port DOWN",
+    "2024-01-15 10:02 - FW-01 policy applied",
+]
 
 
 
 # ─── Ch12 | Challenge 2: Read It Back ────────────────────────────────────────
-# Open network_log.txt and print its full contents
+# Open "network_log.txt" and print its full contents using .read()
 
 
 
 # ─── Ch12 | Challenge 3: Append an Entry ─────────────────────────────────────
-# Append new_entry to network_log.txt without overwriting existing lines
-#new_entry = "2024-01-15 10:03 - AP-01 rebooted\n"
+# Append new_entry to "network_log.txt" without overwriting existing lines
+new_entry = "2024-01-15 10:03 - AP-01 rebooted\n"
 
 
 
 # ─── Ch12 | Challenge 4: Line by Line ────────────────────────────────────────
-# Read network_log.txt line by line — print each with its line number starting at 1
+# Read "network_log.txt" line by line — print each with its line number starting at 1
+# Format: "1: 2024-01-15 10:00 - RTR-01 connection UP"
 
 
 
 # ─── Ch12 | Challenge 5: Does It Exist? ──────────────────────────────────────
-# Use os.path.exists() to check each file before opening — print found or missing
-#filenames = ["network_log.txt", "missing_config.txt", "audit_log.txt"]
+# Use os.path.exists() to check each file before opening — print "Found" or "Missing"
+import os
+filenames = ["network_log.txt", "missing_config.txt", "audit_log.txt"]
 
 
 
 # ─── Ch12 | Challenge 6: Count the Lines ─────────────────────────────────────
-# Read network_log.txt and print how many lines it contains
+# Read "network_log.txt" and print how many lines it contains
 
 
 
 # ─── Ch12 | Challenge 7: Find All Errors ─────────────────────────────────────
-# Read network_log.txt line by line — collect and print only lines containing "ERROR"
+# Read "network_log.txt" line by line — collect and print only lines containing "ERROR"
 
 
 
 # ─── Ch12 | Challenge 8: Make a Backup ───────────────────────────────────────
-# Copy network_log.txt to network_log_backup.txt using shutil.copy()
+# Copy "network_log.txt" to "network_log_backup.txt" using shutil.copy()
+import shutil
 
 
 
 # ─── Ch12 | Challenge 9: Clean Up ────────────────────────────────────────────
-# Delete network_log_backup.txt if it exists using os.path.exists() then os.remove()
+# Delete "network_log_backup.txt" if it exists using os.path.exists() + os.remove()
 
 
 
 # ─── Ch12 | Challenge 10: Write a Report ─────────────────────────────────────
-# Read network_log.txt, count lines by severity (INFO/WARNING/ERROR),
-# write a summary report to report.txt with counts for each level
+# Read "network_log.txt", count lines by severity (INFO / WARNING / ERROR)
+# Write a summary report to "report.txt" with counts for each level
 
 
 
-# ─── Ch12 | Challenge 11: WGU Style — File Exists Check ─────────────────────
+# ─── Ch12 | Challenge 11: Read Lines into a List ─────────────────────────────
+# Read all lines from "network_log.txt" into a list using .readlines()
+# Strip each line of whitespace and print the list
+
+
+
+# ─── Ch12 | Challenge 12: Write Multiple Files ────────────────────────────────
+# Write a separate .txt file for each device in devices
+# Filename: "{hostname}.txt", Content: "hostname: {hostname}\nip: {ip}\nstatus: {status}"
+devices = [
+    ("RTR-01", "10.0.0.1", "UP"),
+    ("SW-01",  "10.0.0.2", "DOWN"),
+    ("FW-01",  "10.0.0.3", "UP"),
+]
+
+
+
+# ─── Ch12 | Challenge 13: Parse a Log File ───────────────────────────────────
+# Read "network_log.txt" line by line — build a list of dicts with keys "timestamp" and "message"
+# Split each line on " - " to separate the two parts; print the list
+
+
+
+# ─── Ch12 | Challenge 14: os.path Toolkit ────────────────────────────────────
+# For the path below, print: basename, dirname, extension, and whether it exists
+import os
+path = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCClaude/ch12_file_management/network_log.txt"
+
+
+
+# ─── Ch12 | Challenge 15: Build a File Path ──────────────────────────────────
+# Use os.path.join() to build a full path from parts — print it
+# Parts: base_dir, "logs", "2024", "january", "network_log.txt"
+base_dir = "C:/data"
+
+
+
+# ─── Ch12 | Challenge 16: List Files in a Directory ──────────────────────────
+# Use os.listdir() to print all files in the current directory
+# Filter to only show .py files
+
+
+
+# ─── Ch12 | Challenge 17: Read a CSV File ────────────────────────────────────
+# Write devices_csv to "devices.csv", then read it back using csv.reader
+# Print each row as a list
+import csv
+devices_csv = "hostname,ip,role\nRTR-01,10.0.0.1,router\nSW-01,10.0.0.2,switch\n"
+
+
+
+# ─── Ch12 | Challenge 18: Write CSV with DictWriter ──────────────────────────
+# Write device_records to "devices_dict.csv" using csv.DictWriter
+# Include the header row
+device_records = [
+    {"hostname": "RTR-01", "ip": "10.0.0.1", "role": "router"},
+    {"hostname": "SW-01",  "ip": "10.0.0.2", "role": "switch"},
+]
+
+
+
+# ─── Ch12 | Challenge 19: Read JSON Config ───────────────────────────────────
+# Write device_config to "device_config.json" using json.dump
+# Read it back with json.load and print just the "hostname" value
+import json
+device_config = {"hostname": "CORE-RTR-01", "ip": "10.0.0.1", "role": "core"}
+
+
+
+# ─── Ch12 | Challenge 20: Search a File and Replace ─────────────────────────
+# Read "network_log.txt", replace every occurrence of "DOWN" with "OFFLINE"
+# Write the modified content back to the same file
+
+
+
+# ─── Ch12 | Challenge 21: Rotate a Log ───────────────────────────────────────
+# If "network_log.txt" has more than 3 lines, rename it to "network_log.bak"
+# and create a fresh empty "network_log.txt"
+# Print "Rotated" or "No rotation needed"
+
+
+
+# ─── Ch12 | Challenge 22: Walk a Directory ───────────────────────────────────
+# Use os.walk() to print all .py files found anywhere under the project root
+# Print the full path for each file found
+import os
+root = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCClaude"
+
+
+
+# ─── Ch12 | Challenge 23: WGU Style — File Exists Check ─────────────────────
 # Complete the Python function file_exists_check.
-# The function should accept a filepath string and return True if the file exists,
-# False if it does not. Use os.path.exists().
+# Accept a filepath string and return True if the file exists, False if not.
+# Use os.path.exists().
 #
 # Example: file_exists_check("network_log.txt") → True
 # Example: file_exists_check("missing.txt") → False
@@ -70,11 +163,10 @@ def file_exists_check(filepath):
 
 
 
-# ─── Ch12 | Challenge 12: WGU Style — Find Lines With Keyword ───────────────
+# ─── Ch12 | Challenge 24: WGU Style — Find Lines With Keyword ───────────────
 # Complete the Python function find_lines_with.
-# The function should accept a filepath string and a keyword string,
-# open the file, and return a list of lines (stripped of whitespace/newlines)
-# that contain the keyword.
+# Accept a filepath string and a keyword string.
+# Open the file and return a list of lines (stripped) that contain the keyword.
 #
 # Example: find_lines_with("network_log.txt", "ERROR") → ["ERROR: timeout", "ERROR: retry"]
 #
@@ -83,35 +175,19 @@ def find_lines_with(filepath, keyword):
 
 
 
-# ─── Ch12 | Challenge 13: WGU Style — Line Count ────────────────────────────
-# Complete the Python function line_count.
-# The function should accept a filename string, open the file, and return the
-# number of lines as an integer.
-# This is the exact WGU assessment question 23.
-#
-# Example: line_count("network_log.txt") → 3   (if the file has 3 lines)
-#
-def line_count(filename):
-    pass
-
-
-
-# ─── Ch12 | Challenge 14: WGU Style — Write Dict to CSV ─────────────────────
+# ─── Ch12 | Challenge 25: WGU Style — Write Dict to CSV ─────────────────────
 # Complete the Python function write_dict_to_csv.
-# The function should accept a filename string and append two predefined device
-# records to it using csv.DictWriter. Use append mode ('a') and extrasaction='ignore'.
-# Do NOT write a header row (the file already has one). Write these two rows:
+# Accept a filename string and append two predefined device records using csv.DictWriter.
+# Use append mode ('a') and extrasaction='ignore'. Do NOT write a header row.
+# Write these two rows:
 #   data = [
 #       {"device_name": "Router1", "ip_address": "192.168.1.1"},
 #       {"device_name": "Router2", "ip_address": "192.168.1.2"},
 #   ]
-# The fieldnames are ["device_name", "ip_address"].
-# This matches exact WGU assessment question 26.
+# Fieldnames: ["device_name", "ip_address"]
 #
-# Example: write_dict_to_csv("devices.csv")  → appends 2 rows to the file
+# Example: write_dict_to_csv("devices.csv") → appends 2 rows to the file
 #
 import csv
 def write_dict_to_csv(filename):
     pass
-
-
