@@ -5,23 +5,27 @@ log_entries = [
     "2024-01-15 10:01 - SW-01 port DOWN",
     "2024-01-15 10:02 - FW-01 policy applied",
 ]
+print('Challenge 1 answer:')
 
 
 
 # ─── Ch12 | Challenge 2: Read It Back ────────────────────────────────────────
 # Open "network_log.txt" and print its full contents using .read()
+print('Challenge 2 answer:')
 
 
 
 # ─── Ch12 | Challenge 3: Append an Entry ─────────────────────────────────────
 # Append new_entry to "network_log.txt" without overwriting existing lines
 new_entry = "2024-01-15 10:03 - AP-01 rebooted\n"
+print('Challenge 3 answer:')
 
 
 
 # ─── Ch12 | Challenge 4: Line by Line ────────────────────────────────────────
 # Read "network_log.txt" line by line — print each with its line number starting at 1
 # Format: "1: 2024-01-15 10:00 - RTR-01 connection UP"
+print('Challenge 4 answer:')
 
 
 
@@ -29,39 +33,46 @@ new_entry = "2024-01-15 10:03 - AP-01 rebooted\n"
 # Use os.path.exists() to check each file before opening — print "Found" or "Missing"
 import os
 filenames = ["network_log.txt", "missing_config.txt", "audit_log.txt"]
+print('Challenge 5 answer:')
 
 
 
 # ─── Ch12 | Challenge 6: Count the Lines ─────────────────────────────────────
 # Read "network_log.txt" and print how many lines it contains
+print('Challenge 6 answer:')
 
 
 
 # ─── Ch12 | Challenge 7: Find All Errors ─────────────────────────────────────
 # Read "network_log.txt" line by line — collect and print only lines containing "ERROR"
+print('Challenge 7 answer:')
 
 
 
 # ─── Ch12 | Challenge 8: Make a Backup ───────────────────────────────────────
 # Copy "network_log.txt" to "network_log_backup.txt" using shutil.copy()
 import shutil
+print('Challenge 8 answer:')
 
 
 
 # ─── Ch12 | Challenge 9: Clean Up ────────────────────────────────────────────
 # Delete "network_log_backup.txt" if it exists using os.path.exists() + os.remove()
+print('Challenge 9 answer:')
 
 
 
 # ─── Ch12 | Challenge 10: Write a Report ─────────────────────────────────────
 # Read "network_log.txt", count lines by severity (INFO / WARNING / ERROR)
 # Write a summary report to "report.txt" with counts for each level
+print('Challenge 10 answer:')
 
 
 
 # ─── Ch12 | Challenge 11: Read Lines into a List ─────────────────────────────
 # Read all lines from "network_log.txt" into a list using .readlines()
 # Strip each line of whitespace and print the list
+print('Challenge 11 answer:')
 
 
 
@@ -73,12 +84,14 @@ devices = [
     ("SW-01",  "10.0.0.2", "DOWN"),
     ("FW-01",  "10.0.0.3", "UP"),
 ]
+print('Challenge 12 answer:')
 
 
 
 # ─── Ch12 | Challenge 13: Parse a Log File ───────────────────────────────────
 # Read "network_log.txt" line by line — build a list of dicts with keys "timestamp" and "message"
 # Split each line on " - " to separate the two parts; print the list
+print('Challenge 13 answer:')
 
 
 
@@ -86,6 +99,7 @@ devices = [
 # For the path below, print: basename, dirname, extension, and whether it exists
 import os
 path = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCClaude/ch12_file_management/network_log.txt"
+print('Challenge 14 answer:')
 
 
 
@@ -93,12 +107,14 @@ path = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCCl
 # Use os.path.join() to build a full path from parts — print it
 # Parts: base_dir, "logs", "2024", "january", "network_log.txt"
 base_dir = "C:/data"
+print('Challenge 15 answer:')
 
 
 
 # ─── Ch12 | Challenge 16: List Files in a Directory ──────────────────────────
 # Use os.listdir() to print all files in the current directory
 # Filter to only show .py files
+print('Challenge 16 answer:')
 
 
 
@@ -107,6 +123,7 @@ base_dir = "C:/data"
 # Print each row as a list
 import csv
 devices_csv = "hostname,ip,role\nRTR-01,10.0.0.1,router\nSW-01,10.0.0.2,switch\n"
+print('Challenge 17 answer:')
 
 
 
@@ -117,6 +134,7 @@ device_records = [
     {"hostname": "RTR-01", "ip": "10.0.0.1", "role": "router"},
     {"hostname": "SW-01",  "ip": "10.0.0.2", "role": "switch"},
 ]
+print('Challenge 18 answer:')
 
 
 
@@ -125,12 +143,14 @@ device_records = [
 # Read it back with json.load and print just the "hostname" value
 import json
 device_config = {"hostname": "CORE-RTR-01", "ip": "10.0.0.1", "role": "core"}
+print('Challenge 19 answer:')
 
 
 
 # ─── Ch12 | Challenge 20: Search a File and Replace ─────────────────────────
 # Read "network_log.txt", replace every occurrence of "DOWN" with "OFFLINE"
 # Write the modified content back to the same file
+print('Challenge 20 answer:')
 
 
 
@@ -138,6 +158,7 @@ device_config = {"hostname": "CORE-RTR-01", "ip": "10.0.0.1", "role": "core"}
 # If "network_log.txt" has more than 3 lines, rename it to "network_log.bak"
 # and create a fresh empty "network_log.txt"
 # Print "Rotated" or "No rotation needed"
+print('Challenge 21 answer:')
 
 
 
@@ -146,6 +167,7 @@ device_config = {"hostname": "CORE-RTR-01", "ip": "10.0.0.1", "role": "core"}
 # Print the full path for each file found
 import os
 root = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCClaude"
+print('Challenge 22 answer:')
 
 
 
@@ -161,6 +183,10 @@ import os
 def file_exists_check(filepath):
     pass
 
+print('Challenge 23 answer:')
+print(file_exists_check("network_log.txt"))
+print(file_exists_check("missing.txt"))
+
 
 
 # ─── Ch12 | Challenge 24: WGU Style — Find Lines With Keyword ───────────────
@@ -172,6 +198,9 @@ def file_exists_check(filepath):
 #
 def find_lines_with(filepath, keyword):
     pass
+
+print('Challenge 24 answer:')
+print(find_lines_with("network_log.txt", "DOWN"))
 
 
 
@@ -191,3 +220,6 @@ def find_lines_with(filepath, keyword):
 import csv
 def write_dict_to_csv(filename):
     pass
+
+print('Challenge 25 answer:')
+write_dict_to_csv("devices.csv")

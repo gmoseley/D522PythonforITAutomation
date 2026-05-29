@@ -1,191 +1,171 @@
 # ─── Ch04 | Challenge 1: Where Is It? ────────────────────────────────────────
-# Use .find() to print the index where "ip address" starts in config
+# Use .find() to print the index where "ip" starts in config
 config = "interface GigabitEthernet0/0/1 ip address 10.0.1.1 255.255.255.0"
+print('Challenge 1 answer:')
 
 
 
-# ─── Ch04 | Challenge 2: Find or Fail ────────────────────────────────────────
-# Use .index() to find "subnet" in config — catch the ValueError if not found
-config = "interface GigabitEthernet0/0/1 ip address 10.0.1.1 255.255.255.0"
+# ─── Ch04 | Challenge 2: Is It In There? ─────────────────────────────────────
+# Use 'in' to check if "ERROR" is in log_line — print True or False
+log_line = "2024-01-15 10:23:45 ERROR - Device unreachable: 10.0.0.254"
+print('Challenge 2 answer:')
 
 
 
-# ─── Ch04 | Challenge 3: Is It Local? ────────────────────────────────────────
-# Check if ip starts with "192.168" using 'in' — print "Local" or "External"
-ip = "192.168.10.50"
-
-
-
-# ─── Ch04 | Challenge 4: Count the Hits ──────────────────────────────────────
+# ─── Ch04 | Challenge 3: Count the Errors ────────────────────────────────────
 # Count how many times "ERROR" appears in the log string and print the count
 log = "ERROR: timeout ERROR: retry ERROR: connection lost WARNING: high latency"
+print('Challenge 3 answer:')
 
 
 
-# ─── Ch04 | Challenge 5: Flag the Error ──────────────────────────────────────
+# ─── Ch04 | Challenge 4: Flag the Error ──────────────────────────────────────
 # If log_line contains "ERROR", print "ALERT: error detected" — otherwise print "OK"
 log_line = "2024-01-15 10:23:45 ERROR - Device unreachable: 10.0.0.254"
+print('Challenge 4 answer:')
 
 
 
-# ─── Ch04 | Challenge 6: Filter the Noise ────────────────────────────────────
-# Loop through log_lines and print only lines that contain "CRITICAL"
-log_lines = [
-    "INFO: System startup complete",
-    "CRITICAL: Core switch unreachable",
-    "WARNING: High CPU on RTR-01",
-    "CRITICAL: Firewall policy violation",
-    "INFO: Backup completed successfully",
-]
+# ─── Ch04 | Challenge 5: Is It Local? ────────────────────────────────────────
+# Check if ip starts with "192.168" using startswith() — print "Local" or "External"
+ip = "192.168.10.50"
+print('Challenge 5 answer:')
 
 
 
-# ─── Ch04 | Challenge 7: Find After Position ─────────────────────────────────
+# ─── Ch04 | Challenge 6: Check the Extension ─────────────────────────────────
+# Check if filename ends with ".py" — print True or False
+filename = "deploy_config.py"
+print('Challenge 6 answer:')
+
+
+
+# ─── Ch04 | Challenge 7: Not In There ────────────────────────────────────────
+# Check if "CRITICAL" is NOT in log_line — print True or False
+log_line = "2024-01-15 WARNING: High CPU on RTR-01"
+print('Challenge 7 answer:')
+
+
+
+# ─── Ch04 | Challenge 8: Case-Insensitive Search ─────────────────────────────
+# Check if "error" appears in log_line regardless of case
+# Convert to lowercase first, then use 'in' — print True or False
+log_line = "2024-01-15 WARNING: High Error Rate Detected on RTR-01"
+print('Challenge 8 answer:')
+
+
+
+# ─── Ch04 | Challenge 9: Find After Position ─────────────────────────────────
 # Use .find() with a start argument to find the SECOND occurrence of "ERROR" in log
 # Print the index of the second "ERROR"
 log = "ERROR: timeout at 10:01 ERROR: retry at 10:02"
+print('Challenge 9 answer:')
 
 
 
-# ─── Ch04 | Challenge 8: Does It End With Extension? ─────────────────────────
-# Check if each filename ends with ".py" — print the filename and True/False
-filenames = ["setup.py", "network_log.txt", "deploy.py", "config.json"]
+# ─── Ch04 | Challenge 10: Replace Only First ─────────────────────────────────
+# Use .replace() with count=1 to replace only the first "192.168" in config with "10.10"
+config = "192.168.1.1 routes to 192.168.2.0 via 192.168.1.254"
+print('Challenge 10 answer:')
 
 
 
-# ─── Ch04 | Challenge 9: Search Case-Insensitive ─────────────────────────────
-# Check if "error" appears in log_line regardless of case
-# Convert to lowercase first, then use 'in'
-log_line = "2024-01-15 WARNING: High Error Rate Detected on RTR-01"
+# ─── Ch04 | Challenge 11: Last Slash ─────────────────────────────────────────
+# Use .rfind() to find the index of the LAST "/" in path and print it
+path = "/var/log/network/core/2024-01-15.log"
+print('Challenge 11 answer:')
 
 
 
-# ─── Ch04 | Challenge 10: Find All Severities ────────────────────────────────
-# Loop through log_lines and categorize each: print "HIGH" if it contains "CRITICAL"
-# or "ERROR", "LOW" if it contains "INFO" or "WARNING", "UNKNOWN" otherwise
-log_lines = [
-    "CRITICAL: disk full",
-    "INFO: backup ok",
-    "ERROR: link down",
-    "WARNING: high memory",
-    "DEBUG: trace started",
-]
+# ─── Ch04 | Challenge 12: Extract Between Markers ────────────────────────────
+# Use .find() and slicing to extract the text between "[" and "]"
+# Expected: "CRITICAL"
+log_line = "2024-01-15 10:23:45 [CRITICAL] Core switch unreachable"
+print('Challenge 12 answer:')
 
 
 
-# ─── Ch04 | Challenge 11: Count Lines With Keyword ────────────────────────────
-# Count how many lines in log_lines contain "FAILED" and print the count
-log_lines = [
-    "AUTH FAILED: bad password",
-    "INFO: user logged in",
-    "AUTH FAILED: account locked",
-    "INFO: session started",
-    "CONN FAILED: timeout",
-]
-
-
-
-# ─── Ch04 | Challenge 12: Build a Search Result ──────────────────────────────
-# For each line in log_lines, print the line number (starting at 1) and the line
-# only if it contains "DOWN"
-log_lines = [
-    "RTR-01: Interface UP",
-    "SW-01: Port 3 DOWN",
-    "FW-01: Policy applied",
-    "RTR-02: Interface DOWN",
-    "SW-02: All ports UP",
-]
-
-
-
-# ─── Ch04 | Challenge 13: Extract IP From Line ───────────────────────────────
-# Find the position of the first digit that starts the IP using .find()
-# Then slice from that position to the end and split on the first space to isolate the IP
-# Expected: "10.0.0.254"
-log_line = "Device unreachable: 10.0.0.254 - check routing table"
-
-
-
-# ─── Ch04 | Challenge 14: Check Multiple Substrings ──────────────────────────
+# ─── Ch04 | Challenge 13: Check Both Conditions ──────────────────────────────
 # Print "Authenticated" if log_line contains BOTH "auth" AND "success"
 # Print "Failed" if it contains "auth" AND "fail"
 # Print "Other" otherwise
 log_line = "auth success for user admin from 10.0.0.5"
+print('Challenge 13 answer:')
 
 
 
-# ─── Ch04 | Challenge 15: Replace Only First Occurrence ──────────────────────
-# Use .replace() with count=1 to replace only the first "192.168" in config with "10.10"
-config = "192.168.1.1 routes to 192.168.2.0 via 192.168.1.254"
+# ─── Ch04 | Challenge 14: Extract IP From Line ───────────────────────────────
+# Find the position of ": " in log_line using .find(), then slice everything after it
+# Expected: "10.0.0.254"
+log_line = "Device unreachable: 10.0.0.254"
+print('Challenge 14 answer:')
 
 
 
-# ─── Ch04 | Challenge 16: Collect Matching Lines ─────────────────────────────
-# Build a list of lines from log_lines that contain "TIMEOUT" and print the list
-log_lines = [
-    "CONN TIMEOUT: 10.0.0.5",
-    "INFO: RTR-01 up",
-    "CONN TIMEOUT: 10.0.0.12",
-    "ERROR: disk full",
-    "CONN TIMEOUT: 172.16.0.1",
-]
+# ─── Ch04 | Challenge 15: Filename Without Extension ─────────────────────────
+# Use .rfind() to find the last "." in filename, then slice to get just the base name
+# Expected: "deploy_config"
+filename = "deploy_config.py"
+print('Challenge 15 answer:')
 
 
 
-# ─── Ch04 | Challenge 17: Find First Non-Match ───────────────────────────────
-# Loop through statuses and print the FIRST hostname whose status is not "UP"
-# Print "All UP" if none found
-devices = [
-    ("RTR-01", "UP"),
-    ("SW-01", "UP"),
-    ("FW-01", "DOWN"),
-    ("AP-01", "UP"),
-]
+# ─── Ch04 | Challenge 16: Severity Label ─────────────────────────────────────
+# Check log_line for "CRITICAL", "ERROR", "WARNING", "INFO" in that priority order
+# Print the first one found, or "UNKNOWN" if none match
+log_line = "2024-01-15 ERROR: BGP peer dropped"
+print('Challenge 16 answer:')
 
 
 
-# ─── Ch04 | Challenge 18: Highlight Errors ───────────────────────────────────
-# For each line in log_lines, if it contains "ERROR" print it with ">>> " prepended
-# otherwise print it as-is
-log_lines = [
-    "INFO: startup complete",
-    "ERROR: NTP sync failed",
-    "WARNING: high memory",
-    "ERROR: BGP peer dropped",
-]
+# ─── Ch04 | Challenge 17: Find the Value After a Key ─────────────────────────
+# Find "port=" in config, then slice from after the "=" to the next space to get the value
+# Expected: "443"
+config = "host=10.0.0.1 port=443 proto=tcp"
+print('Challenge 17 answer:')
 
 
 
-# ─── Ch04 | Challenge 19: Count Unique Keywords ──────────────────────────────
-# Count how many of the keywords appear at least once in the full log string
-# Print the count
-keywords = ["ERROR", "WARNING", "CRITICAL", "INFO"]
-log = "ERROR: disk full WARNING: high CPU INFO: backup started INFO: done"
+# ─── Ch04 | Challenge 18: Redact Sensitive Value ─────────────────────────────
+# Find "password=" in log_line, use .split() to isolate the full token, then .replace() it
+# Expected: "auth failed password=**** for user admin"
+log_line = "auth failed password=secret123 for user admin"
+print('Challenge 18 answer:')
 
 
 
-# ─── Ch04 | Challenge 20: Find Between Markers ───────────────────────────────
-# Extract the text between "[" and "]" in log_line using .find() and slicing
-# Expected: "CRITICAL"
-log_line = "2024-01-15 10:23:45 [CRITICAL] Core switch unreachable"
-
-
-
-# ─── Ch04 | Challenge 21: Search and Replace in a List ───────────────────────
-# Build a new list where every line containing "DOWN" has "DOWN" replaced with "OFFLINE"
-# Print the new list
-log_lines = [
-    "RTR-01: UP",
-    "SW-01: DOWN",
-    "FW-01: UP",
-    "AP-01: DOWN",
-]
-
-
-
-# ─── Ch04 | Challenge 22: Find the Last Occurrence ───────────────────────────
-# Use .rfind() to find the index of the LAST occurrence of "/" in path and print it
+# ─── Ch04 | Challenge 19: Extract Filename From Path ─────────────────────────
+# Use .rfind() to locate the last "/" in path, then slice everything after it
+# Expected: "2024-01-15.log"
 path = "/var/log/network/core/2024-01-15.log"
+print('Challenge 19 answer:')
+
+
+
+# ─── Ch04 | Challenge 20: Find Value Between Markers ─────────────────────────
+# Find "hostname=" in config, then slice from after the "=" to the next space
+# Expected: "CORE-RTR-01"
+config = "hostname=CORE-RTR-01 ip=10.0.0.1 status=UP"
+print('Challenge 20 answer:')
+
+
+
+# ─── Ch04 | Challenge 21: Count Present Severities ──────────────────────────
+# Without a loop, use 'in' and boolean arithmetic to count how many of the four
+# severity keywords appear at least once in log
+# Expected: 3 (ERROR, WARNING, and INFO are present; CRITICAL is not)
+log = "ERROR: disk full WARNING: high CPU INFO: backup started"
+print('Challenge 21 answer:')
+
+
+
+# ─── Ch04 | Challenge 22: Validate IP Format ─────────────────────────────────
+# Check that ip contains exactly 3 dots using .count(".")
+# AND that ip starts with a digit using [0].isdigit()
+# AND that ip ends with a digit using [-1].isdigit()
+# Print "Valid format" or "Invalid format"
+ip = "192.168.1.105"
+print('Challenge 22 answer:')
 
 
 
@@ -202,19 +182,27 @@ path = "/var/log/network/core/2024-01-15.log"
 def get_log_severity(log_line):
     pass
 
+print('Challenge 23 answer:')
+print(get_log_severity("CRITICAL: core switch down"))
+print(get_log_severity("INFO: startup complete"))
+print(get_log_severity("System rebooted"))
 
 
-# ─── Ch04 | Challenge 24: WGU Style — Identify High CPU ─────────────────────
-# Complete the Python function identify_high_cpu.
-# The function should accept a list of floats representing CPU usage percentages.
-# Return a list of INTEGER INDICES where CPU usage is greater than 90.0.
+
+# ─── Ch04 | Challenge 24: WGU Style — Find Second Occurrence ────────────────
+# Complete the Python function find_second_occurrence.
+# Use .find() twice: once to locate the first match, then again starting after it.
+# Return the index of the second occurrence, or -1 if there is no second match.
 #
-# Example: identify_high_cpu([85.0, 92.5, 88.0, 95.2]) → [1, 3]
-# Example: identify_high_cpu([91.0, 88.8]) → [0]
-# Example: identify_high_cpu([80.0, 85.0]) → []
+# Example: find_second_occurrence("ERROR: timeout ERROR: retry", "ERROR") → 17
+# Example: find_second_occurrence("WARNING: high CPU", "ERROR") → -1
 #
-def identify_high_cpu(cpu_list):
+def find_second_occurrence(text, keyword):
     pass
+
+print('Challenge 24 answer:')
+print(find_second_occurrence("ERROR: timeout ERROR: retry", "ERROR"))
+print(find_second_occurrence("WARNING: high CPU", "ERROR"))
 
 
 
@@ -229,3 +217,7 @@ def identify_high_cpu(cpu_list):
 #
 def extract_config_value(config, key):
     pass
+
+print('Challenge 25 answer:')
+print(extract_config_value("host=10.0.0.1 port=443 proto=tcp", "port"))
+print(extract_config_value("host=10.0.0.1 port=443", "vlan"))

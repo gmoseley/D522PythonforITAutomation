@@ -1,27 +1,32 @@
 # ─── Ch10 | Challenge 1: Count to Ten ────────────────────────────────────────
 # Use a while loop to print numbers 1 through 10
+print('Challenge 1 answer:')
 
 
 
 # ─── Ch10 | Challenge 2: Countdown ───────────────────────────────────────────
 # Count down from 10 to 1 using a while loop, then print "Liftoff!"
+print('Challenge 2 answer:')
 
 
 
 # ─── Ch10 | Challenge 3: Break on Command ────────────────────────────────────
 # Keep prompting the user for input — break out of the loop when they type "quit"
 # Print "Goodbye!" when the loop ends
+print('Challenge 3 answer:')
 
 
 
 # ─── Ch10 | Challenge 4: Skip the Evens ──────────────────────────────────────
 # Loop i from 1 to 20 — use continue to skip even numbers, only print odds
+print('Challenge 4 answer:')
 
 
 
 # ─── Ch10 | Challenge 5: Keep Asking ─────────────────────────────────────────
 # Use while True to keep asking for a number — exit only when input is a valid integer
 # Print "Got it: {number}" when valid input is received
+print('Challenge 5 answer:')
 
 
 
@@ -30,12 +35,14 @@
 # then print "Connection failed after {max_retries} attempts"
 max_retries = 3
 host = "10.0.0.254"
+print('Challenge 6 answer:')
 
 
 
 # ─── Ch10 | Challenge 7: While vs For ────────────────────────────────────────
 # Sum all numbers 1–100 using a while loop, then again using a for loop
 # Print both results and confirm they match
+print('Challenge 7 answer:')
 
 
 
@@ -47,12 +54,15 @@ import random
 def get_status():
     return random.choice(["DOWN", "DOWN", "UP"])
 
+print('Challenge 8 answer:')
+
 
 
 # ─── Ch10 | Challenge 9: Menu Loop ───────────────────────────────────────────
 # Build a text menu that keeps running until the user picks 3 (Exit)
 # Options: 1) Show devices  2) Show logs  3) Exit
 # Print a message for options 1 and 2; break cleanly on 3
+print('Challenge 9 answer:')
 
 
 
@@ -61,6 +71,7 @@ def get_status():
 # Print each running total, then print "Buffer full at: {total}"
 buffer_limit = 1500
 packet_sizes = [200, 400, 300, 500, 150, 250, 600]
+print('Challenge 10 answer:')
 
 
 
@@ -73,6 +84,7 @@ devices = [
     ("FW-01",  "DOWN"),
     ("AP-01",  "UP"),
 ]
+print('Challenge 11 answer:')
 
 
 
@@ -80,6 +92,7 @@ devices = [
 # Use a while loop with .pop(0) to process items from the front of the queue
 # Print "Processing: {item}" for each, stop when the queue is empty
 queue = ["task_backup", "task_patch", "task_reboot", "task_audit"]
+print('Challenge 12 answer:')
 
 
 
@@ -88,12 +101,14 @@ queue = ["task_backup", "task_patch", "task_reboot", "task_audit"]
 # Stop after 4 valid entries, then print the collected list
 # (For testing, simulate input by iterating through a predefined list instead of input())
 inputs = ["RTR-01", "LAPTOP-5", "SW-02", "unknown", "FW-03", "RTR-02"]
+print('Challenge 13 answer:')
 
 
 
 # ─── Ch10 | Challenge 14: Nested While Loop ──────────────────────────────────
 # Use nested while loops to print a 3×3 grid of "row,col" coordinates
 # e.g., "0,0  0,1  0,2 / 1,0 ..."  (one row per line)
+print('Challenge 14 answer:')
 
 
 
@@ -101,6 +116,7 @@ inputs = ["RTR-01", "LAPTOP-5", "SW-02", "unknown", "FW-03", "RTR-02"]
 # Loop through cpu_readings — keep a running total and count
 # After all readings, print the average formatted to 1 decimal place
 cpu_readings = [72.5, 88.1, 65.3, 91.2, 77.8, 84.0, 69.5]
+print('Challenge 15 answer:')
 
 
 
@@ -115,6 +131,7 @@ log_lines = [
     "CRITICAL: disk full",
     "INFO: patch applied",
 ]
+print('Challenge 16 answer:')
 
 
 
@@ -123,6 +140,7 @@ log_lines = [
 # Print "Attempt {n}..." each time, then "Connected!" if attempt < 3 else "Failed"
 # (Simulate success on attempt 3)
 max_retries = 5
+print('Challenge 17 answer:')
 
 
 
@@ -130,12 +148,14 @@ max_retries = 5
 # Process commands from the list until you hit "EXIT"
 # Print "Running: {cmd}" for each valid command; stop and print "Session ended" on EXIT
 commands = ["SHOW INTERFACES", "SHOW ROUTE", "PING 10.0.0.1", "EXIT", "SHOW VLAN"]
+print('Challenge 18 answer:')
 
 
 
 # ─── Ch10 | Challenge 19: Build a Result List ────────────────────────────────
 # Use a while loop to build a list of squared values for numbers 1 through 10
 # Print the result list
+print('Challenge 19 answer:')
 
 
 
@@ -144,6 +164,7 @@ commands = ["SHOW INTERFACES", "SHOW ROUTE", "PING 10.0.0.1", "EXIT", "SHOW VLAN
 # Stop when they meet or cross — print "lo={lo}, hi={hi}" each step
 lo = 0
 hi = 9
+print('Challenge 20 answer:')
 
 
 
@@ -151,6 +172,7 @@ hi = 9
 # Use a while loop to slide a window of size 3 across packet_log and print each window
 # e.g., window 0: [p0, p1, p2], window 1: [p1, p2, p3], ...
 packet_log = [100, 200, 150, 300, 250, 180, 220]
+print('Challenge 21 answer:')
 
 
 
@@ -158,6 +180,7 @@ packet_log = [100, 200, 150, 300, 250, 180, 220]
 # Search devices for hostname "FW-EDGE-01" using a while loop
 # Use break when found — use the while/else clause to print "Not found" if the loop completes
 devices = ["RTR-01", "SW-01", "AP-01", "FW-CORE-01", "FW-EDGE-01"]
+print('Challenge 22 answer:')
 
 
 
@@ -170,6 +193,10 @@ devices = ["RTR-01", "SW-01", "AP-01", "FW-CORE-01", "FW-EDGE-01"]
 #
 def sum_to_n(n):
     pass
+
+print('Challenge 23 answer:')
+print(sum_to_n(5))
+print(sum_to_n(10))
 
 
 
@@ -184,6 +211,10 @@ def sum_to_n(n):
 def collect_evens(limit):
     pass
 
+print('Challenge 24 answer:')
+print(collect_evens(10))
+print(collect_evens(7))
+
 
 
 # ─── Ch10 | Challenge 25: WGU Style — Identify High CPU ─────────────────────
@@ -197,3 +228,8 @@ def collect_evens(limit):
 #
 def identify_high_cpu(cpu_list):
     pass
+
+print('Challenge 25 answer:')
+print(identify_high_cpu([85.0, 92.5, 88.0, 95.2]))
+print(identify_high_cpu([91.0, 88.8]))
+print(identify_high_cpu([80.0, 85.0]))

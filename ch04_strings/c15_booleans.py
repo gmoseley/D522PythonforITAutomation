@@ -1,18 +1,21 @@
 # ─── Ch04 | Challenge 1: Is It a Number? ─────────────────────────────────────
 # Use .isdigit() to check user_input — if valid, convert to int and print x2, else warn
 user_input = "67"
+print('Challenge 1 answer:')
 
 
 
 # ─── Ch04 | Challenge 2: Letters Only ────────────────────────────────────────
 # Use .isalpha() to check if username contains only letters — print "pass" or "fail"
 username = "admin123"
+print('Challenge 2 answer:')
 
 
 
 # ─── Ch04 | Challenge 3: Upper or Lower? ─────────────────────────────────────
 # Check alert_code with .isupper() and .islower() — print which one it is, or "mixed"
 alert_code = "CRITICAL"
+print('Challenge 3 answer:')
 
 
 
@@ -20,6 +23,7 @@ alert_code = "CRITICAL"
 # Use .startswith() to check if hostname starts with "RTR", "SW", or "FW"
 # Print "Valid prefix" or "Unknown prefix"
 hostname = "SW-CORE-01"
+print('Challenge 4 answer:')
 
 
 
@@ -27,24 +31,30 @@ hostname = "SW-CORE-01"
 # Store the result of (port == 443) in a variable called is_secure
 # Then use it in an if/else to print "Secure" or "Insecure"
 port = 443
+print('Challenge 5 answer:')
 
 
 
-# ─── Ch04 | Challenge 6: Truthy or Falsy? ────────────────────────────────────
-# For each value in the list, print "truthy" or "falsy" using an if/else
-values = [0, "", "hello", [], [1], None, 42]
+# ─── Ch04 | Challenge 6: Empty Check ─────────────────────────────────────────
+# An empty string is falsy — use a separate if/else on each variable to print "has data" or "empty"
+# Do not use a loop — write two separate if/else blocks
+hostname1 = "RTR-01"
+hostname2 = ""
+print('Challenge 6 answer:')
 
 
 
 # ─── Ch04 | Challenge 7: Alphanumeric Check ──────────────────────────────────
 # Use .isalnum() to check if token is alphanumeric — print True or False
 token = "A1B2C3"
+print('Challenge 7 answer:')
 
 
 
-# ─── Ch04 | Challenge 8: Ends With Check ─────────────────────────────────────
-# Check if each filename in the list ends with ".log" — print filename + True/False
-filenames = ["syslog.log", "config.txt", "access.log", "error.json"]
+# ─── Ch04 | Challenge 8: Log File Check ──────────────────────────────────────
+# Check if filename ends with ".log" — print True or False
+filename = "syslog.log"
+print('Challenge 8 answer:')
 
 
 
@@ -52,25 +62,33 @@ filenames = ["syslog.log", "config.txt", "access.log", "error.json"]
 # Print "Valid log file" only if filename starts with "log" AND ends with ".txt"
 # Otherwise print "Not a log file"
 filename = "log_2024_01_15.txt"
+print('Challenge 9 answer:')
 
 
 
 # ─── Ch04 | Challenge 10: None Check ─────────────────────────────────────────
 # Check if result is None using 'is None' — print "No data" or the value
 result = None
+print('Challenge 10 answer:')
 
 
 
-# ─── Ch04 | Challenge 11: Boolean Arithmetic ─────────────────────────────────
-# Count how many values in the list are truthy by summing booleans
-# Hint: True == 1, False == 0 in arithmetic context
-values = [0, 1, "", "ok", None, 42, [], [1]]
+# ─── Ch04 | Challenge 11: Count True Conditions ──────────────────────────────
+# Without a loop, use boolean arithmetic to count how many of these conditions are True
+# Conditions: is_admin is True, port > 0, hostname starts with "RTR", status equals "UP"
+# Print the count
+is_admin = True
+port = 8080
+hostname = "RTR-01"
+status = "DOWN"
+print('Challenge 11 answer:')
 
 
 
 # ─── Ch04 | Challenge 12: Not Operator ───────────────────────────────────────
 # Use the 'not' operator: print "No errors found" if error_list is empty, else print its length
 error_list = []
+print('Challenge 12 answer:')
 
 
 
@@ -80,6 +98,7 @@ error_list = []
 is_admin = False
 is_active = True
 has_vpn = True
+print('Challenge 13 answer:')
 
 
 
@@ -87,6 +106,7 @@ has_vpn = True
 # Check if every character in port_str is a digit using .isdigit()
 # If so, convert to int and check if it's in range 1-65535 — print "Valid" or "Invalid"
 port_str = "8080"
+print('Challenge 14 answer:')
 
 
 
@@ -94,6 +114,7 @@ port_str = "8080"
 # Use 'and' short-circuit: only call .upper() on hostname if hostname is not None
 # Print the uppercased name, or "No hostname" if it's None
 hostname = None
+print('Challenge 15 answer:')
 
 
 
@@ -101,12 +122,18 @@ hostname = None
 # Store the result of (1 <= score <= 100) in is_valid_score
 # Print it, then use it in an if/else to print "Valid score" or "Out of range"
 score = 87
+print('Challenge 16 answer:')
 
 
 
-# ─── Ch04 | Challenge 17: Filter with Bool ───────────────────────────────────
-# Build a new list containing only the truthy values from mixed_data
-mixed_data = [0, "RTR-01", None, "SW-02", "", 42, False, "FW-01"]
+# ─── Ch04 | Challenge 17: Status Summary ─────────────────────────────────────
+# Without a loop, use boolean arithmetic to count how many devices are "UP"
+# Print: "X of 4 devices are UP"
+status1 = "UP"
+status2 = "DOWN"
+status3 = "UP"
+status4 = "UP"
+print('Challenge 17 answer:')
 
 
 
@@ -114,22 +141,28 @@ mixed_data = [0, "RTR-01", None, "SW-02", "", 42, False, "FW-01"]
 # Check if octet_str is all digits AND 0 <= int(octet_str) <= 255
 # Print "Valid" or "Invalid"
 octet_str = "192"
+print('Challenge 18 answer:')
 
 
 
 # ─── Ch04 | Challenge 19: Classify Port ──────────────────────────────────────
-# Classify port using boolean expressions:
+# Classify port using chained boolean comparisons:
 # Well-known: 1-1023  |  Registered: 1024-49151  |  Dynamic: 49152-65535
 # Print the category, or "Invalid" if out of range
 port = 8080
+print('Challenge 19 answer:')
 
 
 
 # ─── Ch04 | Challenge 20: Any and All ────────────────────────────────────────
-# Use any() to check if at least one device is "DOWN"
-# Use all() to check if every device is "UP"
-# Print both results
-statuses = ["UP", "UP", "DOWN", "UP"]
+# Use any() to check if at least one of these conditions is True
+# Use all() to check if all of them are True
+# Conditions: is_admin, port > 0, is_active
+# Print both results with labels
+is_admin = False
+port = 8080
+is_active = True
+print('Challenge 20 answer:')
 
 
 
@@ -137,9 +170,10 @@ statuses = ["UP", "UP", "DOWN", "UP"]
 # Print "Valid" only if ALL of these are true:
 #   - Length is between 4 and 16 characters
 #   - First character is alpha (.isalpha())
-#   - The rest is alphanumeric (.isalnum())
+#   - The rest is alphanumeric (.isalnum() on the slice [1:])
 # Otherwise print "Invalid" with a reason
 username = "admin007"
+print('Challenge 21 answer:')
 
 
 
@@ -147,6 +181,7 @@ username = "admin007"
 # Use a one-line conditional expression to set label = "CRITICAL" if cpu > 90 else "OK"
 # Then print label
 cpu = 95.2
+print('Challenge 22 answer:')
 
 
 
@@ -162,6 +197,11 @@ cpu = 95.2
 #
 def is_valid_ip_octet(value):
     pass
+
+print('Challenge 23 answer:')
+print(is_valid_ip_octet("192"))
+print(is_valid_ip_octet("256"))
+print(is_valid_ip_octet("abc"))
 
 
 
@@ -180,6 +220,11 @@ def is_valid_ip_octet(value):
 def validate_id(employee_id):
     pass
 
+print('Challenge 24 answer:')
+print(validate_id("HRD00123"))
+print(validate_id("Ops123456"))
+print(validate_id("HRD0012"))
+
 
 
 # ─── Ch04 | Challenge 25: WGU Style — Classify Device ───────────────────────
@@ -197,3 +242,8 @@ def validate_id(employee_id):
 #
 def classify_device(hostname):
     pass
+
+print('Challenge 25 answer:')
+print(classify_device("RTR-CORE-01"))
+print(classify_device("AP-FLOOR2-01"))
+print(classify_device("SRV-DB-01"))

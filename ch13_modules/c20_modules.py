@@ -1,24 +1,28 @@
 # ─── Ch13 | Challenge 1: Know Your Environment ───────────────────────────────
 # Use os to print: current working directory and a sorted list of .py files in it
 import os
+print('Challenge 1 answer:')
 
 
 
 # ─── Ch13 | Challenge 2: System Info ─────────────────────────────────────────
 # Use sys to print the Python version string and the OS platform
 import sys
+print('Challenge 2 answer:')
 
 
 
 # ─── Ch13 | Challenge 3: What Time Is It? ────────────────────────────────────
 # Print the current date and time formatted as: "2024-01-15 10:23:45"
 from datetime import datetime
+print('Challenge 3 answer:')
 
 
 
 # ─── Ch13 | Challenge 4: Roll the Dice ───────────────────────────────────────
 # Simulate rolling a 6-sided die 5 times — print each result on one line
 import random
+print('Challenge 4 answer:')
 
 
 
@@ -26,6 +30,7 @@ import random
 # Use re to extract the first IP address from log_line and print it
 import re
 log_line = "2024-01-15 10:23:45 - Device 192.168.1.105 unreachable - check routing"
+print('Challenge 5 answer:')
 
 
 
@@ -33,6 +38,7 @@ log_line = "2024-01-15 10:23:45 - Device 192.168.1.105 unreachable - check routi
 # Write device_config to "device_config.json", read it back, print only the "ip" value
 import json
 device_config = {"hostname": "CORE-RTR-01", "ip": "10.0.0.1", "role": "core"}
+print('Challenge 6 answer:')
 
 
 
@@ -40,18 +46,21 @@ device_config = {"hostname": "CORE-RTR-01", "ip": "10.0.0.1", "role": "core"}
 # Use os.walk() to print every .py file found under the project root (non-recursive is fine)
 import os
 root = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCClaude"
+print('Challenge 7 answer:')
 
 
 
 # ─── Ch13 | Challenge 8: Build a Timestamp Filename ─────────────────────────
 # Use datetime to generate a log filename like: "log_20240115_102345.txt" and print it
 from datetime import datetime
+print('Challenge 8 answer:')
 
 
 
 # ─── Ch13 | Challenge 9: Pick a Random Device ────────────────────────────────
 # Create a list of 5 device hostnames, use random.choice() to pick one and print it
 import random
+print('Challenge 9 answer:')
 
 
 
@@ -60,6 +69,7 @@ import random
 #   - ping_check(ip): prints "Pinging {ip}..."
 #   - categorize(hostname): returns "Router", "Switch", "Firewall", or "Unknown"
 # Import helpers here and call both functions with sample values
+print('Challenge 10 answer:')
 
 
 
@@ -68,6 +78,7 @@ import random
 # the path without extension, and whether the file exists
 import os
 log_path = "/var/log/network/core_switch_2024.log"
+print('Challenge 11 answer:')
 
 
 
@@ -75,6 +86,7 @@ log_path = "/var/log/network/core_switch_2024.log"
 # Shuffle devices in place, then pick a random sample of 3 without repeats — print both
 import random
 devices = ["RTR-01", "SW-01", "FW-01", "AP-01", "RTR-02", "SW-02"]
+print('Challenge 12 answer:')
 
 
 
@@ -82,6 +94,7 @@ devices = ["RTR-01", "SW-01", "FW-01", "AP-01", "RTR-02", "SW-02"]
 # Parse date_str into a datetime object using strptime, then print just the year and month
 from datetime import datetime
 date_str = "15/01/2024 10:23:45"
+print('Challenge 13 answer:')
 
 
 
@@ -90,6 +103,7 @@ date_str = "15/01/2024 10:23:45"
 from datetime import datetime
 start_date = "2024-01-01"
 end_date = "2024-03-15"
+print('Challenge 14 answer:')
 
 
 
@@ -101,6 +115,7 @@ RTR-01 at 10.0.0.1 connected to SW-01 at 10.0.0.2
 FW-01 at 203.0.113.1 blocked traffic from 198.51.100.5
 AP-01 at 192.168.1.10 associated 192.168.1.55
 """
+print('Challenge 15 answer:')
 
 
 
@@ -108,6 +123,7 @@ AP-01 at 192.168.1.10 associated 192.168.1.55
 # Use os.environ.get() to read the "PATH" environment variable — print the first entry
 # (split on ";" on Windows, ":" on Linux/Mac)
 import os
+print('Challenge 16 answer:')
 
 
 
@@ -116,6 +132,7 @@ import os
 # Use re.search() to find "ERROR" anywhere in the line — print both results
 import re
 line = "2024-01-15 10:23:45 ERROR - Link down on RTR-01"
+print('Challenge 17 answer:')
 
 
 
@@ -127,6 +144,7 @@ device_list = [
     {"hostname": "SW-01",  "ip": "10.0.0.2"},
     {"hostname": "FW-01",  "ip": "10.0.0.3"},
 ]
+print('Challenge 18 answer:')
 
 
 
@@ -136,6 +154,7 @@ device_list = [
 #   - Human-friendly: "January 15, 2024 10:23 AM"
 #   - Log filename: "log_20240115_102345.txt"
 from datetime import datetime
+print('Challenge 19 answer:')
 
 
 
@@ -144,6 +163,7 @@ from datetime import datetime
 # Pattern hint: (?P<name>...)
 import re
 log_line = "2024-01-15 10:23:45 [ERROR] Core switch unreachable"
+print('Challenge 20 answer:')
 
 
 
@@ -152,6 +172,7 @@ log_line = "2024-01-15 10:23:45 [ERROR] Core switch unreachable"
 # Then print each argument from sys.argv with its index
 # (Run as: python c20_modules.py arg1 arg2)
 import sys
+print('Challenge 21 answer:')
 
 
 
@@ -162,6 +183,7 @@ import sys
 from datetime import datetime
 import re
 hostname = "CORE-RTR 01"
+print('Challenge 22 answer:')
 
 
 
@@ -177,6 +199,10 @@ import os
 def get_file_extension(filename):
     pass
 
+print('Challenge 23 answer:')
+print(get_file_extension("network_log.txt"))
+print(get_file_extension("config.json"))
+
 
 
 # ─── Ch13 | Challenge 24: WGU Style — Days Since Date ───────────────────────
@@ -189,6 +215,9 @@ def get_file_extension(filename):
 from datetime import datetime
 def days_since(date_string):
     pass
+
+print('Challenge 24 answer:')
+print(days_since("2024-01-01"))
 
 
 
@@ -204,3 +233,7 @@ def days_since(date_string):
 from datetime import datetime
 def find_latest(upload_times):
     pass
+
+upload_times1 = ['12/15/2023 08:45 AM', '12/16/2023 11:20 AM', '12/14/2023 03:30 PM']
+print('Challenge 25 answer:')
+print(find_latest(upload_times1))

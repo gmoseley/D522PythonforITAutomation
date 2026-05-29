@@ -3,6 +3,7 @@
 # addition, subtraction, multiplication, division, floor division, modulo, exponent
 a = 17
 b = 5
+print('Challenge 1 answer:')
 
 
 
@@ -11,6 +12,7 @@ b = 5
 # ==, !=, >=, <=, >, <
 x = 42
 y = 100
+print('Challenge 2 answer:')
 
 
 
@@ -18,6 +20,7 @@ y = 100
 # Apply +=10, then -=3, then *=2, then //=4 to score one at a time
 # Print score after each operation
 score = 10
+print('Challenge 3 answer:')
 
 
 
@@ -30,6 +33,7 @@ score = 10
 a = [1, 2, 3]
 b = None
 c = a
+print('Challenge 4 answer:')
 
 
 
@@ -40,6 +44,7 @@ c = a
 blocked = ["192.168.1.100", "10.0.0.5", "172.16.0.50"]
 ip = "192.168.1.100"
 ip2 = "10.0.0.99"
+print('Challenge 5 answer:')
 
 
 
@@ -48,6 +53,7 @@ ip2 = "10.0.0.99"
 # Otherwise print "Access denied"
 is_admin = True
 is_active = False
+print('Challenge 6 answer:')
 
 
 
@@ -55,6 +61,7 @@ is_active = False
 # Print both results and explain (in a comment) why they differ
 result1 = 2 + 3 * 4
 result2 = (2 + 3) * 4
+print('Challenge 7 answer:')
 
 
 
@@ -63,6 +70,7 @@ result2 = (2 + 3) * 4
 # Label each result
 packets = 251
 interval = 2
+print('Challenge 8 answer:')
 
 
 
@@ -71,6 +79,7 @@ interval = 2
 # Then use it to get the remainder of packets split across 3 interfaces — print it
 device_count = 14
 packets = 100
+print('Challenge 9 answer:')
 
 
 
@@ -79,6 +88,7 @@ packets = 100
 # Formula: 2 ** (32 - prefix_length) - 2
 # Print the result
 prefix_length = 24
+print('Challenge 10 answer:')
 
 
 
@@ -87,6 +97,7 @@ prefix_length = 24
 # Apply: += 50, then *= 1.1, then -= 20, then /= 2
 # Print the final result rounded to 2 decimal places
 bandwidth = 100.0
+print('Challenge 11 answer:')
 
 
 
@@ -94,6 +105,7 @@ bandwidth = 100.0
 # Use a chained comparison to check if cpu_usage is between 0 and 100 (inclusive)
 # Print "Valid" or "Invalid"
 cpu_usage = 87.3
+print('Challenge 12 answer:')
 
 
 
@@ -103,6 +115,7 @@ cpu_usage = 87.3
 # Expected: 192 & 255 = 192,  168 & 255 = 168
 ip_octet = 192
 mask_octet = 255
+print('Challenge 13 answer:')
 
 
 
@@ -112,6 +125,7 @@ mask_octet = 255
 # Expected: "192.168.1.0"
 ip = "192.168.1.105"
 mask = "255.255.255.0"
+print('Challenge 14 answer:')
 
 
 
@@ -123,6 +137,7 @@ mask = "255.255.255.0"
 #   - (cpu > 80) and (mem > 70)
 cpu = 95
 mem = 65
+print('Challenge 15 answer:')
 
 
 
@@ -133,6 +148,7 @@ mem = 65
 is_admin = False
 is_active = True
 has_vpn = True
+print('Challenge 16 answer:')
 
 
 
@@ -142,6 +158,7 @@ has_vpn = True
 severity = 3
 age_days = 7
 ack = 1
+print('Challenge 17 answer:')
 
 
 
@@ -149,6 +166,7 @@ ack = 1
 # Assign the length of log_line to n, then print "Long line" if n > 60, else "Short"
 # Use a normal assignment (not walrus) — this is practice for reading walrus later
 log_line = "2024-01-15 10:23:45 ERROR - Core switch unreachable at 10.0.0.254"
+print('Challenge 18 answer:')
 
 
 
@@ -157,6 +175,7 @@ log_line = "2024-01-15 10:23:45 ERROR - Core switch unreachable at 10.0.0.254"
 # Otherwise print "Division by zero"
 packets = 1500
 interval = 0
+print('Challenge 19 answer:')
 
 
 
@@ -164,6 +183,7 @@ interval = 0
 # Left-shift 1 by 8 bits to get 256 (one octet of address space) — print it
 # Right-shift 65536 by 8 bits — print the result and explain what it represents
 value = 1
+print('Challenge 20 answer:')
 
 
 
@@ -173,6 +193,7 @@ expr1 = 10 - 2 ** 3 + 1
 expr2 = (10 - 2) ** 3 + 1
 expr3 = 10 - (2 ** 3 + 1)
 expr4 = not 0 == 0
+print('Challenge 21 answer:')
 
 
 
@@ -182,6 +203,7 @@ expr4 = not 0 == 0
 #   - Usable hosts: total - 2
 #   - Network class: "Class C" if prefix_length >= 24, "Class B" if >= 16, else "Class A"
 prefix_length = 26
+print('Challenge 22 answer:')
 
 
 
@@ -196,6 +218,10 @@ prefix_length = 26
 def minutes_to_hours(minutes):
     pass
 
+print('Challenge 23 answer:')
+print(minutes_to_hours(90))
+print(minutes_to_hours(45))
+
 
 
 # ─── Ch05 | Challenge 24: WGU Style — Usable Hosts ──────────────────────────
@@ -208,6 +234,10 @@ def minutes_to_hours(minutes):
 #
 def usable_hosts(prefix_length):
     pass
+
+print('Challenge 24 answer:')
+print(usable_hosts(24))
+print(usable_hosts(30))
 
 
 
@@ -224,3 +254,7 @@ def usable_hosts(prefix_length):
 #
 def same_subnet(ip1, ip2, mask):
     pass
+
+print('Challenge 25 answer:')
+print(same_subnet("192.168.1.100", "192.168.1.200", "255.255.255.0"))
+print(same_subnet("192.168.1.100", "192.168.2.200", "255.255.255.0"))

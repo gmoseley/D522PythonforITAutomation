@@ -145,7 +145,7 @@ else:
 # Expected: "RTR-01" for "RTR-EDGE-01"
 hostname = "RTR-EDGE-01"
 print('Challenge 18 answer:')
-print(('-'.join(hostname.split('-'))[0::2]))
+print((hostname.split('-'))[0::2])
 
 
 
