@@ -33,6 +33,7 @@ print(csv_line.split(',')[:1])
 # Join the hostnames list into a single comma-separated string and print it
 hostnames = ["RTR-01", "SW-02", "FW-03", "AP-04"]
 print('Challenge 5 answer:')
+print(','.join(hostnames))
 
 
 
@@ -41,6 +42,7 @@ print('Challenge 5 answer:')
 # Hint: convert to lowercase first, then use .count()
 log_line = "authentication failure at 192.168.1.100 - invalid password attempt"
 print('Challenge 6 answer:')
+print(log_line.count('a'))
 
 
 
