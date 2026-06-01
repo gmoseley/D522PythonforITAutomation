@@ -98,7 +98,7 @@ print('Challenge 13 answer:')
 # Ch14: os.path Toolkit ────────────────────────────────────
 # For the path below, print: basename, dirname, extension, and whether it exists
 import os
-path = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCClaude/ch12_file_management/network_log.txt"
+path = "c:/Users/student/projects/D522/ch12_file_management/network_log.txt"
 print('Challenge 14 answer:')
 
 
@@ -166,7 +166,7 @@ print('Challenge 21 answer:')
 # Use os.walk() to print all .py files found anywhere under the project root
 # Print the full path for each file found
 import os
-root = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCClaude"
+root = "c:/Users/student/projects/D522"
 print('Challenge 22 answer:')
 
 

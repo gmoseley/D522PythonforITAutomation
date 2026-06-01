@@ -45,7 +45,7 @@ print('Challenge 6 answer:')
 # Ch07: Walk the Directory ──────────────────────────────────
 # Use os.walk() to print every .py file found under the project root (non-recursive is fine)
 import os
-root = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCClaude"
+root = "c:/Users/student/projects/D522"
 print('Challenge 7 answer:')
 
 
