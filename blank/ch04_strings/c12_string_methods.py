@@ -1,92 +1,80 @@
-# Ch01: Shout It Out ──────────────────────── ### Grade: B ──
+# Ch01: Shout It Out ──────────────────────── ###
 # Print device_name in all uppercase, then all lowercase
 device_name = "Core-Router-01"
 print('Challenge 1 answer:')
-print(device_name.upper())
 
 
 
-# Ch02: Clean User Input ──────────────────── ### Grade: B ──
+# Ch02: Clean User Input ──────────────────── ###
 # Strip the whitespace from messy_input and print the cleaned result
 messy_input = "   192.168.1.1   "
 print('Challenge 2 answer:')
-print(messy_input.replace(' ',''))
 
 
 
 
-# Ch03: Find and Replace ──────────────────── ### Grade: A+ ─
+# Ch03: Find and Replace ──────────────────── ###
 # Replace "failed" with "timed out" in the error message and print it
 error_msg = "Connection to 192.168.1.1 has failed"
 print('Challenge 3 answer:')
-print(error_msg.replace('failed','timed out'))
 
 
-# Ch04: First Field ───────────────────────── ### Grade: B ──
+# Ch04: First Field ───────────────────────── ###
 # Split csv_line on "," and print just the first field using an index
 csv_line = "CORE-RTR-01,10.0.0.1,router,UP"
 print('Challenge 4 answer:')
-print(csv_line.split(',')[:1])
 
 
-# Ch05: Rejoin the Crew ───────────────────── ### Grade: A+ ─
+# Ch05: Rejoin the Crew ───────────────────── ###
 # Join the hostnames list into a single comma-separated string and print it
 hostnames = ["RTR-01", "SW-02", "FW-03", "AP-04"]
 print('Challenge 5 answer:')
-print(','.join(hostnames))
 
 
 
-# Ch06: How Many A's? ─────────────────────── ### Grade: B ──
+# Ch06: How Many A's? ─────────────────────── ###
 # Count how many times the letter 'a' appears in log_line (case-insensitive)
 # Hint: convert to lowercase first, then use .count()
 log_line = "authentication failure at 192.168.1.100 - invalid password attempt"
 print('Challenge 6 answer:')
-print(log_line.count('a'))
 
 
 
-# Ch07: Does It Match? ────────────────────── ### Grade: B ──
+# Ch07: Does It Match? ────────────────────── ###
 # Check if filename starts with "log" AND ends with ".txt" — print True or False
 filename = "log_2024_01_15.txt"
 print('Challenge 7 answer:')
-print(filename.startswith('log') and filename.endswith('txt'))
 
 
 
 
-# Ch08: Title Case ────────────────────────── ### Grade: A+ ─
+# Ch08: Title Case ────────────────────────── ###
 # Print device_desc in title case using .title()
 device_desc = "core distribution switch layer 2"
 print('Challenge 8 answer:')
-print(device_desc.title())
 
 
 
-# Ch09: Count Words ───────────────────────── ### Grade: A+ ─
+# Ch09: Count Words ───────────────────────── ###
 # Split the sentence into words and print how many words it contains using len()
 sentence = "Enable logging for all interfaces on the core router"
 print('Challenge 9 answer:')
-print(len(sentence.split(' ')))
 
 
 
-# Ch10: Remove All Spaces ────────────────── ### Grade: A+ ─
+# Ch10: Remove All Spaces ────────────────── ###
 # Remove every space from mac_addr using .replace() and print the result
 # Expected: "AA:BB:CC:DD:EE:FF"
 mac_addr = "AA : BB : CC : DD : EE : FF"
 print('Challenge 10 answer:')
-print(mac_addr.replace(' ',''))
 
 
 
-# Ch11: Strip Custom Chars ────────────────── ### Grade: B ─
+# Ch11: Strip Custom Chars ────────────────── ###
 # Strip the leading and trailing dashes from padded_name and print it
 # Expected: "CORE-RTR-01"
 padded_name = "---CORE-RTR-01---"
 print('Challenge 11 answer:')
-print(padded_name[3:14:])
-#This is messy because it just splits on the static name. Assuming all names are the same len and the number is enumerated it works. Outside of that, it does not work :D
 
 
 

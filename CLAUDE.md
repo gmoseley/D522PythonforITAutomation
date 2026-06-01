@@ -10,9 +10,14 @@ WGU D522 (Python for IT Automation) student. Background: C#, PowerShell, LUA, HT
 
 ### How to grade
 - When Grayson says "grade" — **read the file yourself**, don't wait for him to paste code.
-- Write the grade **inline at the end of the challenge header**: `### Grade: A+`
-- Grade every challenge that has code. Skip blank stubs.
+- Grade format: header ends with `###`, grade goes on the **next line** as a comment with a reason:
+  ```
+  # Ch06: How Many A's? ─────────────────────── ###
+  # Grade: B - Task says case-insensitive; skipped .lower() — correct only because the string is already lowercase.
+  ```
+- Grade every challenge that has code. Skip blank stubs (`pass` with no body = skip).
 - After grading, **git push automatically** (no confirmation needed).
+- After grading, **regenerate `blank/` for the same file** so the blank version stays in sync with any formatting changes.
 
 ### Rubric
 | Grade | Meaning |
@@ -53,33 +58,30 @@ WGU D522 (Python for IT Automation) student. Background: C#, PowerShell, LUA, HT
 ## Project Structure
 
 ```
-/Users/graysonmoseley/Python/
-├── initialTraining/        ← C1–C10 complete (variables, input, if/else, loops, functions, lists, dicts, error handling, file I/O, FizzBuzz)
-├── ch04_strings/
-│   ├── c11_string_slicing.py      ← in progress
-│   ├── c12_string_methods.py
-│   ├── c13_string_formatting.py
-│   ├── c14_string_search.py
-│   └── c15_booleans.py
-├── ch05_operators/
-│   └── c14_operators.py
-├── ch06_tuples_sets/
-│   ├── c15_tuples.py
-│   └── c16_sets.py
-├── ch10_loops/
-│   └── c17_while_loops.py
-├── ch11_error_handling/
-│   └── c18_error_handling.py
-├── ch12_file_management/
-│   └── c19_file_management.py
-├── ch13_modules/
-│   └── c20_modules.py
-└── capstone/               ← cap01–cap05, data/, output/
+completed/               ← Grayson's working files with solutions and grades
+  ch04_strings/
+    c11_string_slicing.py
+    c12_string_methods.py
+    c13_string_formatting.py
+    c14_string_search.py
+    c15_booleans.py
+  ch05_operators/
+  ch06_tuples_sets/
+  ch10_loops/
+  ch11_error_handling/
+  ch12_file_management/
+  ch13_modules/
+blank/                   ← clean templates (no answers, no grades) for public use
+  ch04_strings/
+  ...
+initialTraining/         ← C1–C10 complete (variables, input, if/else, loops, functions, etc.)
+capstone/                ← cap01–cap05, data/, output/
 ```
 
 ## Challenge File Format
 
-- Header: `# ─── Ch04 | Challenge 1: Descriptive Title ──── ### Grade: A+`
+- Header: `# Ch06: Descriptive Title ─────────────────────── ###`
+- Grade (if graded): `# Grade: A+ - reason` on the next line
 - One-line task description below header
 - Pre-defined starter variables (IT-relevant context: hostnames, IPs, log lines)
 - Each file ends with 3 WGU-style function stubs (C23, C24, C25) matching exam format
