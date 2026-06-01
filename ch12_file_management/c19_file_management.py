@@ -1,4 +1,4 @@
-# ─── Ch12 | Challenge 1: Write a Log ─────────────────────────────────────────
+# Ch01: Write a Log ─────────────────────────────────────────
 # Write log_entries to "network_log.txt" — one entry per line
 log_entries = [
     "2024-01-15 10:00 - RTR-01 connection UP",
@@ -9,27 +9,27 @@ print('Challenge 1 answer:')
 
 
 
-# ─── Ch12 | Challenge 2: Read It Back ────────────────────────────────────────
+# Ch02: Read It Back ────────────────────────────────────────
 # Open "network_log.txt" and print its full contents using .read()
 print('Challenge 2 answer:')
 
 
 
-# ─── Ch12 | Challenge 3: Append an Entry ─────────────────────────────────────
+# Ch03: Append an Entry ─────────────────────────────────────
 # Append new_entry to "network_log.txt" without overwriting existing lines
 new_entry = "2024-01-15 10:03 - AP-01 rebooted\n"
 print('Challenge 3 answer:')
 
 
 
-# ─── Ch12 | Challenge 4: Line by Line ────────────────────────────────────────
+# Ch04: Line by Line ────────────────────────────────────────
 # Read "network_log.txt" line by line — print each with its line number starting at 1
 # Format: "1: 2024-01-15 10:00 - RTR-01 connection UP"
 print('Challenge 4 answer:')
 
 
 
-# ─── Ch12 | Challenge 5: Does It Exist? ──────────────────────────────────────
+# Ch05: Does It Exist? ──────────────────────────────────────
 # Use os.path.exists() to check each file before opening — print "Found" or "Missing"
 import os
 filenames = ["network_log.txt", "missing_config.txt", "audit_log.txt"]
@@ -37,46 +37,46 @@ print('Challenge 5 answer:')
 
 
 
-# ─── Ch12 | Challenge 6: Count the Lines ─────────────────────────────────────
+# Ch06: Count the Lines ─────────────────────────────────────
 # Read "network_log.txt" and print how many lines it contains
 print('Challenge 6 answer:')
 
 
 
-# ─── Ch12 | Challenge 7: Find All Errors ─────────────────────────────────────
+# Ch07: Find All Errors ─────────────────────────────────────
 # Read "network_log.txt" line by line — collect and print only lines containing "ERROR"
 print('Challenge 7 answer:')
 
 
 
-# ─── Ch12 | Challenge 8: Make a Backup ───────────────────────────────────────
+# Ch08: Make a Backup ───────────────────────────────────────
 # Copy "network_log.txt" to "network_log_backup.txt" using shutil.copy()
 import shutil
 print('Challenge 8 answer:')
 
 
 
-# ─── Ch12 | Challenge 9: Clean Up ────────────────────────────────────────────
+# Ch09: Clean Up ────────────────────────────────────────────
 # Delete "network_log_backup.txt" if it exists using os.path.exists() + os.remove()
 print('Challenge 9 answer:')
 
 
 
-# ─── Ch12 | Challenge 10: Write a Report ─────────────────────────────────────
+# Ch10: Write a Report ─────────────────────────────────────
 # Read "network_log.txt", count lines by severity (INFO / WARNING / ERROR)
 # Write a summary report to "report.txt" with counts for each level
 print('Challenge 10 answer:')
 
 
 
-# ─── Ch12 | Challenge 11: Read Lines into a List ─────────────────────────────
+# Ch11: Read Lines into a List ─────────────────────────────
 # Read all lines from "network_log.txt" into a list using .readlines()
 # Strip each line of whitespace and print the list
 print('Challenge 11 answer:')
 
 
 
-# ─── Ch12 | Challenge 12: Write Multiple Files ────────────────────────────────
+# Ch12: Write Multiple Files ────────────────────────────────
 # Write a separate .txt file for each device in devices
 # Filename: "{hostname}.txt", Content: "hostname: {hostname}\nip: {ip}\nstatus: {status}"
 devices = [
@@ -88,14 +88,14 @@ print('Challenge 12 answer:')
 
 
 
-# ─── Ch12 | Challenge 13: Parse a Log File ───────────────────────────────────
+# Ch13: Parse a Log File ───────────────────────────────────
 # Read "network_log.txt" line by line — build a list of dicts with keys "timestamp" and "message"
 # Split each line on " - " to separate the two parts; print the list
 print('Challenge 13 answer:')
 
 
 
-# ─── Ch12 | Challenge 14: os.path Toolkit ────────────────────────────────────
+# Ch14: os.path Toolkit ────────────────────────────────────
 # For the path below, print: basename, dirname, extension, and whether it exists
 import os
 path = "c:/Users/gmoseley/OneDrive/College/D522 - Python for IT Automation/VSCClaude/ch12_file_management/network_log.txt"
@@ -103,7 +103,7 @@ print('Challenge 14 answer:')
 
 
 
-# ─── Ch12 | Challenge 15: Build a File Path ──────────────────────────────────
+# Ch15: Build a File Path ──────────────────────────────────
 # Use os.path.join() to build a full path from parts — print it
 # Parts: base_dir, "logs", "2024", "january", "network_log.txt"
 base_dir = "C:/data"
@@ -111,14 +111,14 @@ print('Challenge 15 answer:')
 
 
 
-# ─── Ch12 | Challenge 16: List Files in a Directory ──────────────────────────
+# Ch16: List Files in a Directory ──────────────────────────
 # Use os.listdir() to print all files in the current directory
 # Filter to only show .py files
 print('Challenge 16 answer:')
 
 
 
-# ─── Ch12 | Challenge 17: Read a CSV File ────────────────────────────────────
+# Ch17: Read a CSV File ────────────────────────────────────
 # Write devices_csv to "devices.csv", then read it back using csv.reader
 # Print each row as a list
 import csv
@@ -127,7 +127,7 @@ print('Challenge 17 answer:')
 
 
 
-# ─── Ch12 | Challenge 18: Write CSV with DictWriter ──────────────────────────
+# Ch18: Write CSV with DictWriter ──────────────────────────
 # Write device_records to "devices_dict.csv" using csv.DictWriter
 # Include the header row
 device_records = [
@@ -138,7 +138,7 @@ print('Challenge 18 answer:')
 
 
 
-# ─── Ch12 | Challenge 19: Read JSON Config ───────────────────────────────────
+# Ch19: Read JSON Config ───────────────────────────────────
 # Write device_config to "device_config.json" using json.dump
 # Read it back with json.load and print just the "hostname" value
 import json
@@ -147,14 +147,14 @@ print('Challenge 19 answer:')
 
 
 
-# ─── Ch12 | Challenge 20: Search a File and Replace ─────────────────────────
+# Ch20: Search a File and Replace ─────────────────────────
 # Read "network_log.txt", replace every occurrence of "DOWN" with "OFFLINE"
 # Write the modified content back to the same file
 print('Challenge 20 answer:')
 
 
 
-# ─── Ch12 | Challenge 21: Rotate a Log ───────────────────────────────────────
+# Ch21: Rotate a Log ───────────────────────────────────────
 # If "network_log.txt" has more than 3 lines, rename it to "network_log.bak"
 # and create a fresh empty "network_log.txt"
 # Print "Rotated" or "No rotation needed"
@@ -162,7 +162,7 @@ print('Challenge 21 answer:')
 
 
 
-# ─── Ch12 | Challenge 22: Walk a Directory ───────────────────────────────────
+# Ch22: Walk a Directory ───────────────────────────────────
 # Use os.walk() to print all .py files found anywhere under the project root
 # Print the full path for each file found
 import os
@@ -171,7 +171,7 @@ print('Challenge 22 answer:')
 
 
 
-# ─── Ch12 | Challenge 23: WGU Style — File Exists Check ─────────────────────
+# Ch23: WGU Style — File Exists Check ─────────────────────
 # Complete the Python function file_exists_check.
 # Accept a filepath string and return True if the file exists, False if not.
 # Use os.path.exists().
@@ -189,7 +189,7 @@ print(file_exists_check("missing.txt"))
 
 
 
-# ─── Ch12 | Challenge 24: WGU Style — Find Lines With Keyword ───────────────
+# Ch24: WGU Style — Find Lines With Keyword ───────────────
 # Complete the Python function find_lines_with.
 # Accept a filepath string and a keyword string.
 # Open the file and return a list of lines (stripped) that contain the keyword.
@@ -204,7 +204,7 @@ print(find_lines_with("network_log.txt", "DOWN"))
 
 
 
-# ─── Ch12 | Challenge 25: WGU Style — Write Dict to CSV ─────────────────────
+# Ch25: WGU Style — Write Dict to CSV ─────────────────────
 # Complete the Python function write_dict_to_csv.
 # Accept a filename string and append two predefined device records using csv.DictWriter.
 # Use append mode ('a') and extrasaction='ignore'. Do NOT write a header row.

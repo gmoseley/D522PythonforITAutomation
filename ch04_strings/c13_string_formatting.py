@@ -1,4 +1,4 @@
-# ─── Ch04 | Challenge 1: Simple f-String ─────────────────────────────────────
+# Ch01: Simple f-String ─────────────────────────────────────
 # Use an f-string to print: "Device: CORE-RTR-01 | IP: 10.0.0.1"
 hostname = "CORE-RTR-01"
 ip = "10.0.0.1"
@@ -6,7 +6,7 @@ print('Challenge 1 answer:')
 
 
 
-# ─── Ch04 | Challenge 2: Math in the Message ─────────────────────────────────
+# Ch02: Math in the Message ─────────────────────────────────
 # Use an f-string to print the hostname and cpu_usage rounded to 1 decimal place
 # Expected: "CORE-RTR-01 is at 73.6% CPU"
 hostname = "CORE-RTR-01"
@@ -15,7 +15,7 @@ print('Challenge 2 answer:')
 
 
 
-# ─── Ch04 | Challenge 3: The Big Block ───────────────────────────────────────
+# Ch03: The Big Block ───────────────────────────────────────
 # Store the 3-line network report below in a triple-quoted string and print it
 # Line 1: === Pruhart Tech Network Status ===
 # Line 2: Status: DEGRADED
@@ -24,27 +24,27 @@ print('Challenge 3 answer:')
 
 
 
-# ─── Ch04 | Challenge 4: Right-Align a Number ────────────────────────────────
+# Ch04: Right-Align a Number ────────────────────────────────
 # Print port_number right-aligned in a field 10 characters wide using .rjust()
 port_number = 8080
 print('Challenge 4 answer:')
 
 
 
-# ─── Ch04 | Challenge 5: Two Decimal Places ──────────────────────────────────
+# Ch05: Two Decimal Places ──────────────────────────────────
 # Print bandwidth formatted to exactly 2 decimal places using an f-string format spec
 bandwidth = 95.6789
 print('Challenge 5 answer:')
 
 
 
-# ─── Ch04 | Challenge 6: Build a Divider ─────────────────────────────────────
+# Ch06: Build a Divider ─────────────────────────────────────
 # Print a divider of 40 "-" characters using the * operator — no hardcoding
 print('Challenge 6 answer:')
 
 
 
-# ─── Ch04 | Challenge 7: Formatted Table Row ─────────────────────────────────
+# Ch07: Formatted Table Row ─────────────────────────────────
 # Print one table row with f-string padding so columns align:
 # | CORE-RTR-01      | 10.0.0.1       | UP     |
 # Use left-align :<16 for device, :<14 for ip, :<6 for status
@@ -55,7 +55,7 @@ print('Challenge 7 answer:')
 
 
 
-# ─── Ch04 | Challenge 8: Percent Sign in f-String ────────────────────────────
+# Ch08: Percent Sign in f-String ────────────────────────────
 # Use an f-string format spec to print load as a percentage with 1 decimal place
 # Expected: "Load: 87.3%"
 load = 0.873
@@ -63,7 +63,7 @@ print('Challenge 8 answer:')
 
 
 
-# ─── Ch04 | Challenge 9: Zero-Pad a Port ─────────────────────────────────────
+# Ch09: Zero-Pad a Port ─────────────────────────────────────
 # Print port_number zero-padded to 6 digits using an f-string format spec
 # Expected: "005443"
 port_number = 5443
@@ -71,7 +71,7 @@ print('Challenge 9 answer:')
 
 
 
-# ─── Ch04 | Challenge 10: Hex Output ─────────────────────────────────────────
+# Ch10: Hex Output ─────────────────────────────────────────
 # Print vlan_id in hexadecimal format using an f-string format spec
 # Expected: "VLAN hex: 0x1e" for vlan_id = 30
 vlan_id = 30
@@ -79,14 +79,14 @@ print('Challenge 10 answer:')
 
 
 
-# ─── Ch04 | Challenge 11: Center a Title ─────────────────────────────────────
+# Ch11: Center a Title ─────────────────────────────────────
 # Print title centered in a 50-character field padded with "=" on each side
 title = "INTERFACE REPORT"
 print('Challenge 11 answer:')
 
 
 
-# ─── Ch04 | Challenge 12: Left-Align a Single Name ───────────────────────────
+# Ch12: Left-Align a Single Name ───────────────────────────
 # Print device left-aligned in a 20-character field using f-string padding
 # Then print it again in a 20-char field with "." filling empty space on the right
 device = "SW-DISTRIBUTION-02"
@@ -94,7 +94,7 @@ print('Challenge 12 answer:')
 
 
 
-# ─── Ch04 | Challenge 13: Multi-Line f-String Report ─────────────────────────
+# Ch13: Multi-Line f-String Report ─────────────────────────
 # Build and print a 3-line report using a triple-quoted f-string
 hostname = "EDGE-RTR-02"
 ip = "203.0.113.5"
@@ -103,7 +103,7 @@ print('Challenge 13 answer:')
 
 
 
-# ─── Ch04 | Challenge 14: Table Header + Two Rows ────────────────────────────
+# Ch14: Table Header + Two Rows ────────────────────────────
 # Print a header row and two data rows using three separate print statements
 # Columns: Device (20 wide), IP (16 wide), Status (8 wide)
 device1, ip1, status1 = "CORE-RTR-01", "10.0.0.1", "UP"
@@ -112,7 +112,7 @@ print('Challenge 14 answer:')
 
 
 
-# ─── Ch04 | Challenge 15: Repeat a Pattern ───────────────────────────────────
+# Ch15: Repeat a Pattern ───────────────────────────────────
 # Print a warning banner using the * operator — no hardcoding:
 # !!!!!!!!!!!!!!!!!!! WARNING !!!!!!!!!!!!!!!!!!!
 warning = "WARNING"
@@ -120,7 +120,7 @@ print('Challenge 15 answer:')
 
 
 
-# ─── Ch04 | Challenge 16: Dynamic Field Width ────────────────────────────────
+# Ch16: Dynamic Field Width ────────────────────────────────
 # Use a variable as the field width in an f-string
 # Print hostname left-aligned in a field width equal to max_width
 hostname = "RTR-01"
@@ -129,7 +129,7 @@ print('Challenge 16 answer:')
 
 
 
-# ─── Ch04 | Challenge 17: Integer vs Float Division Display ──────────────────
+# Ch17: Integer vs Float Division Display ──────────────────
 # Print both the floor division and float division of packets / interval
 # Format: "Floor: 125 | Float: 125.50"
 packets = 251
@@ -138,7 +138,7 @@ print('Challenge 17 answer:')
 
 
 
-# ─── Ch04 | Challenge 18: Build a Log Line ───────────────────────────────────
+# Ch18: Build a Log Line ───────────────────────────────────
 # Build and print a structured log line using an f-string
 # Format: "[2024-01-15 10:23:45] [ERROR] CORE-RTR-01: Interface GigE0/1 went DOWN"
 timestamp = "2024-01-15 10:23:45"
@@ -149,7 +149,7 @@ print('Challenge 18 answer:')
 
 
 
-# ─── Ch04 | Challenge 19: Uptime Formatter ───────────────────────────────────
+# Ch19: Uptime Formatter ───────────────────────────────────
 # Calculate hours and minutes from total_minutes using // and %
 # Print: "Uptime: 3 hours, 47 minutes"
 total_minutes = 227
@@ -157,7 +157,7 @@ print('Challenge 19 answer:')
 
 
 
-# ─── Ch04 | Challenge 20: Bandwidth in Two Units ─────────────────────────────
+# Ch20: Bandwidth in Two Units ─────────────────────────────
 # Print bandwidth_mbps converted to both MB/s and GB/s, each to 3 decimal places
 # Format: "125.000 MB/s | 0.125 GB/s"
 bandwidth_mbps = 125.0
@@ -165,7 +165,7 @@ print('Challenge 20 answer:')
 
 
 
-# ─── Ch04 | Challenge 21: Full Status Report ─────────────────────────────────
+# Ch21: Full Status Report ─────────────────────────────────
 # Build and print a complete status report using f-strings — no loop
 # Print: a header line, a divider of 40 "=" chars, then all three device rows
 # Use f-string padding: device 18 wide, ip 15 wide, status 8 wide
@@ -176,7 +176,7 @@ print('Challenge 21 answer:')
 
 
 
-# ─── Ch04 | Challenge 22: Multiline Triple-Quoted Config ─────────────────────
+# Ch22: Multiline Triple-Quoted Config ─────────────────────
 # Store and print a Cisco-style config block in a triple-quoted f-string
 # Include: interface line, ip address line, and no shutdown line
 interface = "GigabitEthernet0/0/1"
@@ -186,7 +186,7 @@ print('Challenge 22 answer:')
 
 
 
-# ─── Ch04 | Challenge 23: WGU Style — Format Uptime ─────────────────────────
+# Ch23: WGU Style — Format Uptime ─────────────────────────
 # Complete the Python function format_uptime.
 # The function should accept an integer total_minutes and return a string
 # formatted as "X hours, Y minutes". Use // for hours and % for remainder.
@@ -203,7 +203,7 @@ print(format_uptime(90))
 
 
 
-# ─── Ch04 | Challenge 24: WGU Style — Format Log Line ───────────────────────
+# Ch24: WGU Style — Format Log Line ───────────────────────
 # Complete the Python function format_log_line.
 # The function should accept timestamp, level, device, and message strings.
 # Return a formatted log line: "[timestamp] [level] device: message"
@@ -222,7 +222,7 @@ print(format_log_line("2024-01-16 08:00:00", "INFO", "SW-01", "Port up"))
 
 
 
-# ─── Ch04 | Challenge 25: WGU Style — Format RGB ────────────────────────────
+# Ch25: WGU Style — Format RGB ────────────────────────────
 # Complete the Python function format_rgb.
 # The function should accept a list of three integers [r, g, b] and return a
 # properly formatted RGB color string with no spaces between values.

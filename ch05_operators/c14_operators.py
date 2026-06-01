@@ -1,4 +1,4 @@
-# ─── Ch05 | Challenge 1: The Full Arithmetic Toolkit ─────────────────────────
+# Ch01: The Full Arithmetic Toolkit ─────────────────────────
 # Print the result of every arithmetic operator applied to a and b with a label:
 # addition, subtraction, multiplication, division, floor division, modulo, exponent
 a = 17
@@ -7,7 +7,7 @@ print('Challenge 1 answer:')
 
 
 
-# ─── Ch05 | Challenge 2: True or False? ──────────────────────────────────────
+# Ch02: True or False? ──────────────────────────────────────
 # Print the result of each comparison between x and y with a label
 # ==, !=, >=, <=, >, <
 x = 42
@@ -16,7 +16,7 @@ print('Challenge 2 answer:')
 
 
 
-# ─── Ch05 | Challenge 3: Running Total ───────────────────────────────────────
+# Ch03: Running Total ───────────────────────────────────────
 # Apply +=10, then -=3, then *=2, then //=4 to score one at a time
 # Print score after each operation
 score = 10
@@ -24,7 +24,7 @@ print('Challenge 3 answer:')
 
 
 
-# ─── Ch05 | Challenge 4: Same Object or Just Equal? ──────────────────────────
+# Ch04: Same Object or Just Equal? ──────────────────────────
 # Use 'is' and 'is not':
 #   - Check if c is a (same object)
 #   - Check if b is None
@@ -37,7 +37,7 @@ print('Challenge 4 answer:')
 
 
 
-# ─── Ch05 | Challenge 5: Blocked IP Check ────────────────────────────────────
+# Ch05: Blocked IP Check ────────────────────────────────────
 # Use 'in' to check if ip is in the blocked list
 # Use 'not in' to check if ip2 is NOT in the blocked list
 # Print both results with labels
@@ -48,7 +48,7 @@ print('Challenge 5 answer:')
 
 
 
-# ─── Ch05 | Challenge 6: Access Rules ────────────────────────────────────────
+# Ch06: Access Rules ────────────────────────────────────────
 # Print "Access granted" only if is_admin AND is_active are both True
 # Otherwise print "Access denied"
 is_admin = True
@@ -57,7 +57,7 @@ print('Challenge 6 answer:')
 
 
 
-# ─── Ch05 | Challenge 7: Order of Operations ─────────────────────────────────
+# Ch07: Order of Operations ─────────────────────────────────
 # Print both results and explain (in a comment) why they differ
 result1 = 2 + 3 * 4
 result2 = (2 + 3) * 4
@@ -65,7 +65,7 @@ print('Challenge 7 answer:')
 
 
 
-# ─── Ch05 | Challenge 8: Floor vs Float Division ─────────────────────────────
+# Ch08: Floor vs Float Division ─────────────────────────────
 # Print both floor division and regular division of packets by interval
 # Label each result
 packets = 251
@@ -74,7 +74,7 @@ print('Challenge 8 answer:')
 
 
 
-# ─── Ch05 | Challenge 9: Modulo in Practice ──────────────────────────────────
+# Ch09: Modulo in Practice ──────────────────────────────────
 # Use modulo to determine if device_count is even or odd — print "Even" or "Odd"
 # Then use it to get the remainder of packets split across 3 interfaces — print it
 device_count = 14
@@ -83,7 +83,7 @@ print('Challenge 9 answer:')
 
 
 
-# ─── Ch05 | Challenge 10: Exponent ───────────────────────────────────────────
+# Ch10: Exponent ───────────────────────────────────────────
 # Calculate the number of usable hosts for a /24 network using exponentiation
 # Formula: 2 ** (32 - prefix_length) - 2
 # Print the result
@@ -92,7 +92,7 @@ print('Challenge 10 answer:')
 
 
 
-# ─── Ch05 | Challenge 11: Augmented Assignment Chain ─────────────────────────
+# Ch11: Augmented Assignment Chain ─────────────────────────
 # Start with bandwidth = 100.0
 # Apply: += 50, then *= 1.1, then -= 20, then /= 2
 # Print the final result rounded to 2 decimal places
@@ -101,7 +101,7 @@ print('Challenge 11 answer:')
 
 
 
-# ─── Ch05 | Challenge 12: Chained Comparison ─────────────────────────────────
+# Ch12: Chained Comparison ─────────────────────────────────
 # Use a chained comparison to check if cpu_usage is between 0 and 100 (inclusive)
 # Print "Valid" or "Invalid"
 cpu_usage = 87.3
@@ -109,7 +109,7 @@ print('Challenge 12 answer:')
 
 
 
-# ─── Ch05 | Challenge 13: Bitwise AND for Subnet ─────────────────────────────
+# Ch13: Bitwise AND for Subnet ─────────────────────────────
 # Apply a bitwise AND between ip_octet and mask_octet to find the network octet
 # Print the result
 # Expected: 192 & 255 = 192,  168 & 255 = 168
@@ -119,7 +119,7 @@ print('Challenge 13 answer:')
 
 
 
-# ─── Ch05 | Challenge 14: Bitwise AND Full IP ────────────────────────────────
+# Ch14: Bitwise AND Full IP ────────────────────────────────
 # Convert both ip and mask strings into lists of ints
 # Apply bitwise AND to each pair of octets and print the network address
 # Expected: "192.168.1.0"
@@ -129,7 +129,7 @@ print('Challenge 14 answer:')
 
 
 
-# ─── Ch05 | Challenge 15: Boolean Operators ──────────────────────────────────
+# Ch15: Boolean Operators ──────────────────────────────────
 # Evaluate and print each expression with a label:
 #   - True and False
 #   - True or False
@@ -141,7 +141,7 @@ print('Challenge 15 answer:')
 
 
 
-# ─── Ch05 | Challenge 16: Compound Access Check ──────────────────────────────
+# Ch16: Compound Access Check ──────────────────────────────
 # Print "Full access" if is_admin is True
 # Print "Read-only" if is_active and has_vpn are True (but not admin)
 # Print "No access" otherwise
@@ -152,7 +152,7 @@ print('Challenge 16 answer:')
 
 
 
-# ─── Ch05 | Challenge 17: Priority Queue Score ───────────────────────────────
+# Ch17: Priority Queue Score ───────────────────────────────
 # Calculate a priority_score = (severity * 10) + (age_days * 2) - (ack * 5)
 # Print the result
 severity = 3
@@ -162,7 +162,7 @@ print('Challenge 17 answer:')
 
 
 
-# ─── Ch05 | Challenge 18: Walrus Operator Preview ────────────────────────────
+# Ch18: Walrus Operator Preview ────────────────────────────
 # Assign the length of log_line to n, then print "Long line" if n > 60, else "Short"
 # Use a normal assignment (not walrus) — this is practice for reading walrus later
 log_line = "2024-01-15 10:23:45 ERROR - Core switch unreachable at 10.0.0.254"
@@ -170,7 +170,7 @@ print('Challenge 18 answer:')
 
 
 
-# ─── Ch05 | Challenge 19: Safe Division Guard ────────────────────────────────
+# Ch19: Safe Division Guard ────────────────────────────────
 # Print packets / interval only if interval != 0 (use 'and' short-circuit or if/else)
 # Otherwise print "Division by zero"
 packets = 1500
@@ -179,7 +179,7 @@ print('Challenge 19 answer:')
 
 
 
-# ─── Ch05 | Challenge 20: Bit Shift ──────────────────────────────────────────
+# Ch20: Bit Shift ──────────────────────────────────────────
 # Left-shift 1 by 8 bits to get 256 (one octet of address space) — print it
 # Right-shift 65536 by 8 bits — print the result and explain what it represents
 value = 1
@@ -187,7 +187,7 @@ print('Challenge 20 answer:')
 
 
 
-# ─── Ch05 | Challenge 21: Operator Precedence Puzzle ─────────────────────────
+# Ch21: Operator Precedence Puzzle ─────────────────────────
 # Predict and then print the result of each expression — add a comment with your prediction
 expr1 = 10 - 2 ** 3 + 1
 expr2 = (10 - 2) ** 3 + 1
@@ -197,7 +197,7 @@ print('Challenge 21 answer:')
 
 
 
-# ─── Ch05 | Challenge 22: Build a Subnet Summary ────────────────────────────
+# Ch22: Build a Subnet Summary ────────────────────────────
 # Given prefix_length, calculate and print:
 #   - Total addresses: 2 ** (32 - prefix_length)
 #   - Usable hosts: total - 2
@@ -207,7 +207,7 @@ print('Challenge 22 answer:')
 
 
 
-# ─── Ch05 | Challenge 23: WGU Style — Minutes to Hours ──────────────────────
+# Ch23: WGU Style — Minutes to Hours ──────────────────────
 # Complete the Python function minutes_to_hours.
 # Accept an integer representing minutes, convert to hours using float division,
 # and return the result as a float.
@@ -224,7 +224,7 @@ print(minutes_to_hours(45))
 
 
 
-# ─── Ch05 | Challenge 24: WGU Style — Usable Hosts ──────────────────────────
+# Ch24: WGU Style — Usable Hosts ──────────────────────────
 # Complete the Python function usable_hosts.
 # Accept an integer prefix_length (e.g., 24 for /24).
 # Calculate 2 ** (32 - prefix_length) - 2 and return it as an integer.
@@ -241,7 +241,7 @@ print(usable_hosts(30))
 
 
 
-# ─── Ch05 | Challenge 25: WGU Style — Same Subnet ────────────────────────────
+# Ch25: WGU Style — Same Subnet ────────────────────────────
 # Complete the Python function same_subnet.
 # Accept two IP strings and a subnet mask string.
 # Apply bitwise AND to each pair of octets (convert to int first).
