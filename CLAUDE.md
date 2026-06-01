@@ -43,15 +43,13 @@ WGU D522 (Python for IT Automation) student. Background: C#, PowerShell, LUA, HT
 - Frame Python syntax differences against C# where helpful (e.g., "like try/catch but `except` instead of `catch`").
 - Don't reference C++ — Grayson knows C#, not C++.
 - If he seems stuck, ask one clarifying question before giving a hint.
-- If he gets a stale error, ask "did you save?" — he forgets Cmd+S before running.
 
 ---
 
 ## Git Workflow
 
 - **Auto-push after every grading session** — no confirmation needed, no prompting.
-- **Never add co-author tags** (`Co-Authored-By: Claude`) to commits. Grayson rejected this explicitly.
-- Commit message style: short imperative, e.g. `Grade ch04 c11 string slicing`.
+- Commit message style: short imperative, e.g. `Grade c12 string methods`.
 
 ---
 
