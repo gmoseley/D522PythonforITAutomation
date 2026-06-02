@@ -119,13 +119,14 @@ else:
 # Expected: "UP"
 csv_line = "CORE-RTR-01,10.0.0.1,router,UP"
 print('Challenge 13 answer:')
-
+print(csv_line.split(',')[-1::])
 
 
 # Ch14: Build a Banner ─────────────────────────────────────
 # Use .center() to print title centered in a 40-character wide field padded with "="
 title = "NETWORK STATUS"
 print('Challenge 14 answer:')
+print(title.center(40, '='))
 
 
 
@@ -134,6 +135,7 @@ print('Challenge 14 answer:')
 # Expected: "10.0.0.1"
 config_entry = "ip_address=10.0.0.1"
 print('Challenge 15 answer:')
+print(config_entry.split('=')[-1])
 
 
 
@@ -142,6 +144,7 @@ print('Challenge 15 answer:')
 # Expected: "CORE-ROUTER-01"
 raw_name = "core router 01"
 print('Challenge 16 answer:')
+print(raw_name.replace(' ','-').upper())
 
 
 
@@ -150,6 +153,7 @@ print('Challenge 16 answer:')
 # Expected: "INTERFACE"
 raw_command = "  interface GigabitEthernet0/0/1  "
 print('Challenge 17 answer:')
+print((((raw_command.strip('  ')).split(' ')[:1])).upper())
 
 
 
