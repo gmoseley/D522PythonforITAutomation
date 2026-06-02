@@ -101,12 +101,17 @@ print(padded_name[3:14:])
 
 
 
-# Ch12: Starts With Any Prefix? ────────────────────────────
+# Ch12: Starts With Any Prefix? ──────────────────────────── ### Grade: A+
 # Check if hostname starts with "RTR", "SW", or "FW" using startswith with a tuple
 # Print "Valid prefix" or "Unknown prefix"
 hostname = "FW-EDGE-01"
+prefixes = ('RTR','SW','FW')
 print('Challenge 12 answer:')
 
+if hostname.startswith(prefixes):
+    print('Valid prefix')
+else:
+    print('Unknown prefix')
 
 
 # Ch13: Last Field in CSV ──────────────────────────────────
