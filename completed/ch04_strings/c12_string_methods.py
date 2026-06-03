@@ -153,7 +153,7 @@ print(raw_name.replace(' ','-').upper())
 # Expected: "INTERFACE"
 raw_command = "  interface GigabitEthernet0/0/1  "
 print('Challenge 17 answer:')
-print((((raw_command.strip('  ')).split(' ')[:1])).upper())
+print((' '.join(((raw_command.strip('  ')).split(' ')[:1]))).upper())
 
 
 
@@ -162,6 +162,7 @@ print((((raw_command.strip('  ')).split(' ')[:1])).upper())
 # Expected: "RTR-DIST-01"
 hostname = "RTR-CORE-01"
 print('Challenge 18 answer:')
+print(hostname.split('-'))
 
 
 
